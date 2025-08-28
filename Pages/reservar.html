@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+	<!--metadatos-->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Reservar | Azul</title>
+	<!--libreria de iconos-->
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+	<!--fontawesome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+	<!--Archivo Css (dejar de ultimo siempre)-->
+	<link rel="stylesheet" href="../Assets/CSS/style.css" />
+	<link rel="icon" href="../Assets/IMG/favicon.png" type="image/png" />
+</head>
+
+<body>
+<!--Header-->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img class="logo" src="../Assets/IMG/logo-vector.png" alt="Logo Azul" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex gap-4">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lugares.html">Lugares</a>
+            </li>
+                      <li class="nav-item">
+              <a class="nav-link active" href="reservar.html">Reservar</a>
+            </li>
+                      <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>-->
+          </ul>
+          <div class="nav-item dropdown-center">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="imagen-usuario" src="../Assets/IMG/testimonio_3.jpg" alt="Imagen-usuario" />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+              <li><a class="dropdown-item" href="mis-reservas.html">Mis reservas</a></li>
+              <!--<li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!---------------------------------------->
+	<main>
+  <section class="reserva-form">
+		<div class="container">
+			<!-- Título de sección -->
+			<div class="text-start mb-4">
+				<h1>Reservá tu aventura</h1>
+				<p>Seleccioná tu lugar, fecha y completá tus datos para vivir la mejor experiencia submarina con Azul.</p>
+			</div>
+
+			<form>
+				<!-- Lugares -->
+				<div class="reserva-card p-4 mb-4">
+					<h3>Lugares</h3>
+					<label for="opciones" class="form-label">Selecciona el lugar que quieres visitar</label>
+					<select class="form-select w-100" id="opciones" name="Lugares">
+						<option selected disabled>Lugares para visitar</option>
+						<option value="el-hierro">El Hierro</option>
+						<option value="playa-chica">Playa Chica</option>
+						<option value="cueva-de-las-morenas">Cueva de las Morenas</option>
+						<option value="las-galletas">Las Galletas</option>
+					</select>
+				</div>
+
+				<!-- Fecha -->
+				<div class="reserva-card p-4 mb-4">
+					<h3>Selecciona una fecha</h3>
+					<div class="row g-3">
+						<div class="col-md-4">
+							<!-- Calendario simplificado -->
+							<div class="fecha-calendario p-3 bg-white">
+								<div class="calendario-header d-flex justify-content-between align-items-center mb-2">
+									<button type="button" class="btn btn-link p-0">&lt;</button>
+									<span>Agosto 2025</span>
+									<button type="button" class="btn btn-link p-0">&gt;</button>
+								</div>
+								<div class="dias-semana d-grid" style="grid-template-columns: repeat(7,1fr); text-align:center;">
+									<span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sa</span><span>Do</span>
+								</div>
+								<div class="dias-grid d-grid" style="grid-template-columns: repeat(7,1fr); text-align:center;">
+									<!-- Números del mes -->
+									<span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+									<span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+									<span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span>
+									<span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+									<span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-8">
+							<h4>Pre reserva tu fecha de salida</h4>
+							<p>En Azul priorizamos la seguridad y la experiencia de nuestros clientes. Antes de participar, es fundamental conocer los lineamientos y requisitos.</p>
+							<ul>
+								<li>Certificación de buceo vigente para todos los participantes.</li>
+								<li>Contar con seguro de buceo obligatorio.</li>
+								<li>Reservar con al menos 7 días de anticipación.</li>
+								<li>En caso de mal clima, se reprogramará sin costo adicional.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Datos de usuarios -->
+				<div class="reserva-card p-4 mb-4">
+					<h3>Ingresa tus datos</h3>
+					<div class="row g-4">
+						<!-- Usuario 1 -->
+						<div class="col-md-12">
+							<h4 class="numero-usuario">1</h4>
+							<div class="datos-form d-grid gap-3">
+								<input type="text" class="form-control" placeholder="Nombre" required>
+								<input type="text" class="form-control" placeholder="Apellido" required>
+								<input type="text" class="form-control" placeholder="Documento de identidad" required>
+								<input type="date" class="form-control" required>
+								<input type="email" class="form-control" placeholder="Correo Electrónico" required>
+								<input type="tel" class="form-control" placeholder="Teléfono" required>
+								<input type="text" class="form-control" placeholder="Título de buceo" required>
+								<input type="text" class="form-control" placeholder="Seguro" required>
+							</div>
+						</div>
+						<!-- Usuario 2 -->
+						<div class="col-md-12">
+							<h4 class="numero-usuario">2</h4>
+							<div class="datos-form d-grid gap-3">
+								<input type="text" class="form-control" placeholder="Nombre" required>
+								<input type="text" class="form-control" placeholder="Apellido" required>
+								<input type="text" class="form-control" placeholder="Documento de identidad" required>
+								<input type="date" class="form-control" required>
+								<input type="email" class="form-control" placeholder="Correo Electrónico" required>
+								<input type="tel" class="form-control" placeholder="Teléfono" required>
+								<input type="text" class="form-control" placeholder="Título de buceo" required>
+								<input type="text" class="form-control" placeholder="Seguro" required>
+							</div>
+						</div>
+						<!-- Usuario 3 -->
+						<div class="col-md-12">
+							<h4 class="numero-usuario">3</h4>
+							<div class="datos-form d-grid gap-3">
+								<input type="text" class="form-control" placeholder="Nombre" required>
+								<input type="text" class="form-control" placeholder="Apellido" required>
+								<input type="text" class="form-control" placeholder="Documento de identidad" required>
+								<input type="date" class="form-control" required>
+								<input type="email" class="form-control" placeholder="Correo Electrónico" required>
+								<input type="tel" class="form-control" placeholder="Teléfono" required>
+								<input type="text" class="form-control" placeholder="Título de buceo" required>
+								<input type="text" class="form-control" placeholder="Seguro" required>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Información importante -->
+				<div class="reserva-card p-4 mb-4">
+					<h3>Información Importante</h3>
+					<ul>
+						<li>La reserva se confirmará únicamente después de recibir el pago correspondiente.</li>
+						<li>Todos los buceadores deben presentar documentación completa y vigente.</li>
+						<li>En Azul, priorizamos tu seguridad y experiencia. Es obligatorio seguir las normas establecidas.</li>
+					</ul>
+					<div class="d-flex flex-column align-items-center gap-3 mt-3">
+						<label class="form-check-label d-flex align-items-center gap-2">
+							<input type="checkbox" class="form-check-input" required> Confirmo que he leído y acepto las normas.
+						</label>
+						<a class="btn-confirmar" href="mis-reservas.html">Confirmar Reserva</a>
+					</div>
+				</div>
+			</form>
+		</div>
+  </section>
+</main>
+
+<!--FOOTER-->
+  <footer>
+    <div class="container footer">
+      <div class="row align-items-center text-center text-lg-start">
+        <!-- Contacto -->
+        <div class="col-12 col-md-3 col-lg-3 fcontacto">
+          <h5>Centro de Buceo Azul</h5>
+          <ul>
+            <li>contacto@azulbuceo.com</li>
+            <li>+54 9 11 1234 5678</li>
+          </ul>
+        </div>
+        <!-- Redes sociales -->
+        <div class="col-12 col-md-6 col-lg-6 fredes text-center">
+          <h5>Síguenos</h5>
+          <div class="redes-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <!-- Logo -->
+        <div class="col-12 col-md-3 col-lg-3 flogo text-center text-lg-end">
+          <img src="../Assets/IMG/logo-vector.png" alt="Logo Azul" class="logo-footer" />
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>2025 Centro de Buceo Azul - Todos los derechos reservados</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

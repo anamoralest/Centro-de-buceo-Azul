@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Head: Metadatos-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro de Buceo | Azul</title>
+  <!--libreria de iconos-->
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <!--fontawesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <!--Archivo Css (dejar de ultimo siempre)-->
+  <link rel="stylesheet" href="Assets/CSS/style.css" />
+  <!--favicon-->
+  <link rel="icon" href="Assets/IMG/favicon.png" type="image/png" />
+</head>
+
+<body>
+  <!--HEADER-->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img class="logo" src="../Assets/IMG/logo-vector.png" alt="Logo Azul" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex gap-4">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Pages/lugares.html">Lugares</a>
+            </li>
+                      <li class="nav-item">
+              <a class="nav-link" href="Pages/reservar.html">Reservar</a>
+            </li>
+                      <li class="nav-item">
+              <a class="nav-link" href="Pages/contacto.html">Contacto</a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>-->
+          </ul>
+          <div class="nav-item dropdown-center">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="imagen-usuario" src="Assets/IMG/testimonio_3.jpg" alt="Imagen-usuario" />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="Pages/perfil.html">Perfil</a></li>
+              <li><a class="dropdown-item" href="Pages/mis-reservas.html">Mis reservas</a></li>
+              <!--<li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <!--MAIN-->
+  <main>
+    <!-- Hero -->
+    <section class="hero d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="col-12 col-lg-7 hero-texto">
+            <h1>Explorá el Mundo Submarino con Azul</h1>
+            <h2 class="hero-subtitle">Reserva tu fecha en Canarias hoy mismo</h2>
+            <p>
+              Con nosotros podrás acceder a los mejores puntos de inmersión para disfrutar 
+              del buceo recreativo, técnico, científico y ambiental. Reserva de forma fácil 
+              y segura tu próxima aventura submarina y prepara tu equipo. ¡Tu experiencia 
+              comienza aquí!
+            </p>
+            <a class="boton-reservar btn" href="Pages/reservar.html">Reservar ahora mismo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Servicios -->
+    <section class="servicios">
+      <div class="container">
+        <h3 class="text-start mb-4">Servicios</h3>
+        <!-- Cards de servicios -->
+        <div class="row g-4">
+          <!-- Recreativo -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="servicios-card h-100">
+              <img class="rectangular-card" src="Assets/IMG/recreativo.jpg" alt="Recreativo">
+              <h4 class="servicios-titulo">Recreativo</h4>
+              <p class="servicio-paragraph">
+                ¡Sumérgete en diversión!<br>
+                Únete a nuestras salidas recreativas de buceo y descubre los lugares más espectaculares bajo el agua. Perfectas para todos los niveles, nuestras excursiones te brindarán una experiencia inolvidable.
+              </p>
+            </div>
+          </div>
+          <!-- Técnico -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="servicios-card h-100">
+              <img class="rectangular-card" src="Assets/IMG/tecnico.jpg" alt="Tecnico">
+              <h4 class="servicios-titulo">Técnico</h4>
+              <p class="servicio-paragraph">
+                Mejora tus habilidades.<br>
+                Nuestros programas técnicos están diseñados para buceadores que buscan perfeccionar sus habilidades. Con la guía de nuestros instructores expertos, dominarás técnicas avanzadas y explorarás nuevas profundidades.
+              </p>
+            </div>
+          </div>
+          <!-- Por hora -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="servicios-card h-100">
+              <img class="rectangular-card" src="Assets/IMG/por-hora.jpg" alt="salida-por-hora">
+              <h4 class="servicios-titulo">Salida por hora</h4>
+              <p class="servicio-paragraph">
+                Bucea a tu ritmo.<br>
+                Ofrecemos salidas por hora para adaptarnos a tu horario. Elige la duración que mejor te convenga y disfruta de una experiencia de buceo personalizada con nuestros profesionales.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Presupuesto -->
+        <div class="presupuesto-card mt-4">
+          <h4 class="servicios-titulo">Presupuesto por jornada</h4>
+          <p class="servicio-paragraph">
+            ¿Quieres una experiencia de buceo personalizada? Contáctanos para solicitar un presupuesto adaptado a tus necesidades.<br>
+            Envíanos un mensaje con detalles como número de participantes, fecha y actividades deseadas.
+          </p>
+          <a class="contactar" href="Pages/contacto.html">Contactar</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Testimonios -->
+    <section class="testimonios">
+      <div class="container">
+        <h3 class="text-start mb-3">Testimonios</h3>
+
+        <div id="carouselTestimonios" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-4">
+                  <div class="testimonio-card">
+                    <img class="circle-card" src="Assets/IMG/testimonio_1.jpg" alt="Testimonio_1">
+                    <h4 class="testimonio-name">"¡Increíble experiencia!" - Marcos</h4>
+                    <p class="testimonio-paragraph">"¡Una experiencia increíble! Desde la reserva hasta el buceo, todo fue súper fácil y organizado. El equipo de Azul nos llevó a un lugar espectacular lleno de vida marina. Definitivamente repetiré pronto."</p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="testimonio-card">
+                    <img class="circle-card" src="Assets/IMG/testimonio_2.jpg" alt="Testimonio_2">
+                    <h4 class="testimonio-name">"Volveré sin dudas." - Laura</h4>
+                    <p class="testimonio-paragraph">"El nivel de profesionalismo es impecable. Hicimos una inmersión técnica profunda, y el equipo fue muy paciente y atento a cada detalle. Me sentí segura en todo momento. Azul es mi centro de confianza en Canarias."</p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="testimonio-card">
+                    <img class="circle-card" src="Assets/IMG/testimonio_3.jpg" alt="Testimonio_3">
+                    <h4 class="testimonio-name">"Profesionales y atentos." - Andres</h4>
+                    <p class="testimonio-paragraph">"Gracias a Azul, nuestro equipo logró recolectar muestras importantes para nuestro estudio ambiental. Su conocimiento de la zona y apoyo logístico fueron clave para el éxito de nuestra misión. ¡Altamente recomendados!"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-4">
+                  <div class="testimonio-card">
+                    <img class="circle-card" src="Assets/IMG/testimonio_2.jpg" alt="Testimonio_4">
+                    <h4 class="testimonio-name">"Experiencia única." - Sofía</h4>
+                    <p class="testimonio-paragraph">"Nunca había buceado y la paciencia del equipo fue increíble. Me acompañaron en cada paso y me hicieron sentir cómoda. ¡Una experiencia que jamás olvidaré!"</p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="testimonio-card">
+                    <img class="circle-card" src="Assets/IMG/testimonio_1.jpg" alt="Testimonio_5">
+                    <h4 class="testimonio-name">"Recomendado 100%." - Javier</h4>
+                    <p class="testimonio-paragraph">"Desde la atención previa hasta la salida al mar, todo impecable. Se nota que disfrutan lo que hacen y transmiten mucha seguridad. Ya estoy planeando la próxima inmersión."</p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="testimonio-card">
+                    <img class="circle-card" src="Assets/IMG/testimonio_2.jpg" alt="Testimonio_6">
+                    <h4 class="testimonio-name">"Muy recomendable." - Carla</h4>
+                    <p class="testimonio-paragraph">"Hicimos una salida familiar y todos quedamos fascinados. Los instructores fueron súper atentos con los más chicos. ¡Seguro volveremos!"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Controles -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon custom-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="next">
+            <span class="carousel-control-next-icon custom-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Info Adicional -->
+    <section class="info-adicional py-5">
+      <div class="container">
+        <div class="row justify-content-center g-4">
+          <div class="col-12 col-md-6">
+            <div class="info-card">
+              <h3>Normas y Reglamento de la Actividad</h3>
+              <p>
+                En Azul priorizamos la seguridad. Para participar en nuestras actividades:
+              </p>
+              <ul>
+                <li>Asiste a la charla de seguridad previa.</li>
+                <li>Usa correctamente el equipo entregado.</li>
+                <li>No consumir alcohol o drogas antes de bucear.</li>
+                <li>Informa condiciones médicas relevantes.</li>
+                <li>Respeta siempre al instructor y la vida marina.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="info-card">
+              <h3>Exención de Responsabilidad</h3>
+              <p>
+                Azul provee equipo y guías profesionales, pero no se responsabiliza por:
+              </p>
+              <ul>
+                <li>Factores naturales imprevistos (corrientes, clima, fauna).</li>
+                <li>Uso incorrecto o negligente del equipo.</li>
+                <li>Problemas médicos no informados.</li>
+                <li>Incumplimiento de las normas de seguridad.</li>
+              </ul>
+              <p>
+                Se recomienda contar con seguro de accidentes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--FOOTER-->
+  <footer>
+    <div class="container footer">
+      <div class="row align-items-center text-center text-lg-start">
+        <!-- Contacto -->
+        <div class="col-12 col-md-3 col-lg-3 fcontacto">
+          <h5>Centro de Buceo Azul</h5>
+          <ul>
+            <li>contacto@azulbuceo.com</li>
+            <li>+54 9 11 1234 5678</li>
+          </ul>
+        </div>
+        <!-- Redes sociales -->
+        <div class="col-12 col-md-6 col-lg-6 fredes text-center">
+          <h5>Síguenos</h5>
+          <div class="redes-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <!-- Logo -->
+        <div class="col-12 col-md-3 col-lg-3 flogo text-center text-lg-end">
+          <img src="Assets/IMG/logo-vector.png" alt="Logo Azul" class="logo-footer" />
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>2025 Centro de Buceo Azul - Todos los derechos reservados</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

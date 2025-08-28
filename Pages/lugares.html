@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--METADATOS-->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Lugares | Azul</title>
+	<!--libreria de iconos-->
+	<!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+	<!--fontawesome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+	<!--Archivo Css (dejar de ultimo siempre)-->
+	<link rel="stylesheet" href="../Assets/CSS/style.css" /> 
+	<link rel="icon" href="../Assets/IMG/favicon.png" type="image/png" />
+</head>
+
+<body>
+	<!--Header-->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img class="logo" src="../Assets/IMG/logo-vector.png" alt="Logo Azul" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex gap-4">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="lugares.html">Lugares</a>
+            </li>
+                      <li class="nav-item">
+              <a class="nav-link" href="reservar.html">Reservar</a>
+            </li>
+                      <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>-->
+          </ul>
+          <div class="nav-item dropdown-center">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="imagen-usuario" src="../Assets/IMG/testimonio_3.jpg" alt="Imagen-usuario" />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+              <li><a class="dropdown-item" href="mis-reservas.html">Mis reservas</a></li>
+              <!--<li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<!--MAIN-->
+  <main>
+		<section class="lugares">
+			<div class="container">
+				<div class="text-center mb-4">
+					<h1 class="titulo-seccion text-start">Lugares para visitar</h1>
+					<p class="subtitulo-seccion text-start">Explora los mejores sitios de buceo en Canarias, desde arrecifes llenos de vida hasta cuevas volcánicas únicas en el mundo.</p>
+				</div>
+				<div class="row g-4">
+					<!-- Lugar 1 -->
+					<div class="col-12">
+						<div class="card-lugares row g-0">
+							<div class="col-md-3">
+								<img class="img-lugares" src="../Assets/IMG/el-hierro.jpg" alt="el-hierro"/>
+							</div>
+							<div class="col-md-9 d-flex flex-column justify-content-between p-3">
+								<div>
+									<h3>El Hierro</h3>
+									<h4 class="tipo">Técnico</h4>
+									<p>Famoso por sus volcanes submarinos y aguas cristalinas. Ideal para quienes buscan inmersiones profundas con gran biodiversidad.</p>
+								</div>
+								<a href="reservar.html" class="btn-reservar mt-2 ms-auto">Reservar ahora</a>
+							</div>
+						</div>
+					</div>
+					<!-- Lugar 2 -->
+					<div class="col-12">
+						<div class="card-lugares row g-0">
+							<div class="col-md-3">
+								<img class="img-lugares" src="../Assets/IMG/playa-chica.jpg" alt="playa-chica"/>
+							</div>
+							<div class="col-md-9 d-flex flex-column justify-content-between p-3">
+								<div>
+									<h3>Playa Chica</h3>
+									<h4 class="tipo">Recreativo</h4>
+									<p>Aguas tranquilas, gran visibilidad y rica biodiversidad. Perfecto para principiantes o quienes buscan relajarse explorando la vida marina.</p>
+								</div>
+								<a href="reservar.html" class="btn-reservar mt-2 ms-auto">Reservar ahora</a>
+							</div>
+						</div>
+					</div>
+					<!-- Lugar 3 -->
+					<div class="col-12">
+						<div class="card-lugares row g-0">
+							<div class="col-md-3">
+								<img class="img-lugares" src="../Assets/IMG/cueva-las-morenas.jpg" alt="las-morenas"/>
+							</div>
+							<div class="col-md-9 d-flex flex-column justify-content-between p-3">
+								<div>
+									<h3>Cueva de Las Morenas</h3>
+									<h4 class="tipo">Técnico</h4>
+									<p>Un emocionante sistema de cavernas habitado por morenas, pulpos y otras especies nocturnas. Requiere experiencia previa.</p>
+								</div>
+								<a href="reservar.html" class="btn-reservar mt-2 ms-auto">Reservar ahora</a>
+							</div>
+						</div>
+					</div>
+					<!-- Lugar 4 -->
+					<div class="col-12">
+						<div class="card-lugares row g-0">
+							<div class="col-md-3">
+								<img class="img-lugares" src="../Assets/IMG/las-galletas.jpg" alt="las-galletas"/>
+							</div>
+							<div class="col-md-9 d-flex flex-column justify-content-between p-3">
+								<div>
+									<h3>Las Galletas</h3>
+									<h4 class="tipo">Recreativo</h4>
+									<p>Zona costera ideal para inmersiones ligeras. Fondos arenosos con bancos de peces y la posibilidad de ver caballitos de mar.</p>
+								</div>
+								<a href="reservar.html" class="btn-reservar mt-2 ms-auto">Reservar ahora</a>
+							</div>
+						</div>
+					</div>
+					<!-- Lugar 5 -->
+					<div class="col-12">
+						<div class="card-lugares row g-0">
+							<div class="col-md-3">
+								<img class="img-lugares" src="../Assets/IMG/el-hierro.jpg" alt="el-hierro"/>
+							</div>
+							<div class="col-md-9 d-flex flex-column justify-content-between p-3">
+								<div>
+									<h3>La Catedral</h3>
+									<h4 class="tipo">Técnico</h4>
+									<p>Formación volcánica submarina con impresionantes arcos y pasajes. Ideal para buceadores experimentados que buscan paisajes únicos.</p>
+								</div>
+								<a href="reservar.html" class="btn-reservar mt-2 ms-auto">Reservar ahora</a>
+							</div>
+						</div>
+					</div>
+					<!-- Lugar 6 -->
+					<div class="col-12">
+						<div class="card-lugares row g-0">
+							<div class="col-md-3">
+								<img class="img-lugares" src="../Assets/IMG/playa-chica.jpg" alt="playa-chica"/>
+							</div>
+							<div class="col-md-9 d-flex flex-column justify-content-between p-3">
+								<div>
+									<h3>La Restinga</h3>
+									<h4 class="tipo">Recreativo</h4>
+									<p>Ubicada en El Hierro, es famosa por su enorme variedad de peces y tortugas. Un lugar tranquilo y perfecto para fotografía submarina.</p>
+								</div>
+								<a href="reservar.html" class="btn-reservar mt-2 ms-auto">Reservar ahora</a>
+							</div>
+						</div>
+					</div>
+					<!-- Lugar 7 -->
+					<div class="col-12">
+						<div class="card-lugares row g-0">
+							<div class="col-md-3">
+								<img class="img-lugares" src="../Assets/IMG/cueva-las-morenas.jpg" alt="las-morenas"/>
+							</div>
+							<div class="col-md-9 d-flex flex-column justify-content-between p-3">
+								<div>
+									<h3>Malpique</h3>
+									<h4 class="tipo">Técnico</h4>
+									<p>Santuario submarino con cruces conmemorativas y restos históricos. Combina buceo recreativo con historia y cultura canaria.</p>
+								</div>
+								<a href="reservar.html" class="btn-reservar mt-2 ms-auto">Reservar ahora</a>
+							</div>
+						</div>
+					</div>
+					<!-- Lugar 8 -->
+					<div class="col-12">
+						<div class="card-lugares row g-0">
+							<div class="col-md-3">
+								<img class="img-lugares" src="../Assets/IMG/las-galletas.jpg" alt="las-galletas"/>
+							</div>
+							<div class="col-md-9 d-flex flex-column justify-content-between p-3">
+								<div>
+									<h3>Punta de Teno</h3>
+									<h4 class="tipo">Recreativo</h4>
+									<p>Ubicado en Tenerife, destaca por sus aguas claras y abundante fauna marina, desde mantas hasta delfines cercanos a la costa.</p>
+								</div>
+								<a href="reservar.html" class="btn-reservar mt-2 ms-auto">Reservar ahora</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+<!--FOOTER-->
+  <footer>
+    <div class="container footer">
+      <div class="row align-items-center text-center text-lg-start">
+        <!-- Contacto -->
+        <div class="col-12 col-md-3 col-lg-3 fcontacto">
+          <h5>Centro de Buceo Azul</h5>
+          <ul>
+            <li>contacto@azulbuceo.com</li>
+            <li>+54 9 11 1234 5678</li>
+          </ul>
+        </div>
+        <!-- Redes sociales -->
+        <div class="col-12 col-md-6 col-lg-6 fredes text-center">
+          <h5>Síguenos</h5>
+          <div class="redes-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <!-- Logo -->
+        <div class="col-12 col-md-3 col-lg-3 flogo text-center text-lg-end">
+          <img src="../Assets/IMG/logo-vector.png" alt="Logo Azul" class="logo-footer" />
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>2025 Centro de Buceo Azul - Todos los derechos reservados</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

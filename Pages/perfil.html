@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+	<!--Metadados-->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Perfil | Azul</title>
+	<!--libreria de iconos-->
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+	<!--fontawesome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+	<!--Archivo Css (dejar de ultimo siempre)-->
+	<link rel="stylesheet" href="../Assets/CSS/style.css" />
+	<link rel="icon" href="../Assets/IMG/favicon.png" type="image/png" />
+</head>
+
+<body>
+<!--Header-->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img class="logo" src="../Assets/IMG/logo-vector.png" alt="Logo Azul" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex gap-4">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lugares.html">Lugares</a>
+            </li>
+                      <li class="nav-item">
+              <a class="nav-link" href="reservar.html">Reservar</a>
+            </li>
+                      <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>-->
+          </ul>
+          <div class="nav-item dropdown-center">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="imagen-usuario" src="../Assets/IMG/testimonio_3.jpg" alt="Imagen-usuario" />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+              <li><a class="dropdown-item" href="mis-reservas.html">Mis reservas</a></li>
+              <!--<li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+	<main>
+    <div class="container">
+      <!-- Información Personal -->
+      <section class="perfil-section">
+        <h1 class="mb-4">Información Personal</h1>
+        <div class="row align-items-center g-4">
+          <!-- Foto y nombre -->
+          <div class="col-md-3 text-center">
+            <img src="../Assets/IMG/testimonio_3.jpg" alt="Perfil" class="imagen-perfil mb-2" />
+            <p class="fw-bold fs-5">Andrés Martínez</p>
+          </div>
+          <!-- Datos -->
+          <div class="col-md-9">
+            <div class="perfil-datos row g-3">
+              <div class="col-md-6 card-perfil">
+                <h4>Correo electrónico:</h4>
+                <p>andres.martinez23@e-mail.com</p>
+              </div>
+              <div class="col-md-6 card-perfil">
+                <h4>Contraseña:</h4>
+                <p>••••••••••••••</p>
+              </div>
+              <div class="col-md-6 card-perfil">
+                <h4>Teléfono:</h4>
+                <p>+54 9 11 2345 6789</p>
+              </div>
+              <div class="col-md-6 card-perfil">
+                <h4>Fecha de nacimiento:</h4>
+                <p>1990-08-15</p>
+              </div>
+              <div class="col-md-6 card-perfil">
+                <h4>Documento de identidad:</h4>
+                <p>DNI 38.456.789</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Datos de Buceo -->
+      <section class="perfil-section mb-4">
+        <h3 class="mb-4">Datos de Buceo</h3>
+        <div class="perfil-datos row g-3">
+          <div class="col-md-6 card-perfil">
+            <h4>Nivel de certificación:</h4>
+            <p>Advanced Open Water Diver</p>
+          </div>
+          <div class="col-md-6 card-perfil">
+            <h4>N° de credencial:</h4>
+            <p>PADI-123456789</p>
+          </div>
+          <div class="col-md-6 card-perfil">
+            <h4>Agencia certificadora:</h4>
+            <p>PADI</p>
+          </div>
+          <div class="col-md-6 card-perfil">
+            <h4>Fecha de emisión:</h4>
+            <p>2022-03-10</p>
+          </div>
+          <div class="col-md-6 card-perfil">
+            <h4>Seguro médico de buceo:</h4>
+            <p>123456789123</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Acciones -->
+      <section class="acciones justify-content-center d-flex flex-wrap gap-3">
+        <a href="#" class="btn">Editar datos</a>
+        <a href="#" class="btn">Guardar cambios</a>
+        <a href="#" class="btn">Cerrar sesión</a>
+        <a href="#" class="btn">Eliminar cuenta</a>
+      </section>
+    </div>
+  </main>
+
+<!--FOOTER-->
+  <footer>
+    <div class="container footer">
+      <div class="row align-items-center text-center text-lg-start">
+        <!-- Contacto -->
+        <div class="col-12 col-md-3 col-lg-3 fcontacto">
+          <h5>Centro de Buceo Azul</h5>
+          <ul>
+            <li>contacto@azulbuceo.com</li>
+            <li>+54 9 11 1234 5678</li>
+          </ul>
+        </div>
+        <!-- Redes sociales -->
+        <div class="col-12 col-md-6 col-lg-6 fredes text-center">
+          <h5>Síguenos</h5>
+          <div class="redes-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <!-- Logo -->
+        <div class="col-12 col-md-3 col-lg-3 flogo text-center text-lg-end">
+          <img src="../Assets/IMG/logo-vector.png" alt="Logo Azul" class="logo-footer" />
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>2025 Centro de Buceo Azul - Todos los derechos reservados</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
