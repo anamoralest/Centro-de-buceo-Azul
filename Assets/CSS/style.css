@@ -345,21 +345,6 @@ header nav{
   right: -50px; /* distancia a la derecha del carrusel */
 }
 
-/* Mobile: un testimonio por fila */
-@media (max-width: 768px) {
-  .carousel-item .col-12.col-md-4 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  /* Ajustar controles un poco más cerca en mobile */
-  .carousel-control-prev {
-    left: -30px;
-  }
-  .carousel-control-next {
-    right: -30px;
-  }
-}
 
 
 /* Info Adicional */
@@ -436,24 +421,6 @@ header nav{
 	color:#0005A1;
 }
 
-/* Mobile: card vertical */
-@media (max-width: 767px) {
-  .card-lugares {
-    flex-direction: column; /* apila la imagen y el texto */
-    border-radius: 8px;     /* todas las esquinas exteriores */
-    overflow: hidden;       /* para que la imagen respete el borde */
-  }
-
-  .img-lugares {
-    border-radius: 8px 8px 0 0; /* redondea solo la parte superior */
-  }
-
-  .col-md-9 {
-    border-radius: 0 0 8px 8px; /* redondea solo la parte inferior del texto */
-  }
-}
-
-
 
 
 /*-----------------------------*/
@@ -493,12 +460,6 @@ header nav{
     gap: 30px;
     max-width: 1040px;
     margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-    .selector-fecha {
-        grid-template-columns: 1fr; /* columnas apiladas en mobile */
-    }
 }
 
 .fecha-calendario {
@@ -603,14 +564,6 @@ header nav{
     gap: 15px;
     margin-top: 20px;
 }
-
-@media(min-width: 768px) {
-    .acciones-reserva {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-}
-
 
 .acepto-reglas {
     display: flex;
@@ -880,15 +833,61 @@ footer {
     padding-top: 10px;
     border-top: 1px solid rgba(0,5,161,0.3);
 }
+
+/*--media queries-*/
+
 @media (max-width: 991px) {
   .footer .row > div {
-    margin-bottom: 25px; /* espacio entre bloques en mobile */
+    margin-bottom: 25px; 
   }
 
   .footer .row > div:last-child {
-    margin-bottom: 0; /* no agrega espacio extra al último */
+    margin-bottom: 0; 
   }
 }
+
+@media (max-width: 768px) {
+  .card-lugares {
+    flex-direction: column; 
+    border-radius: 8px;     
+    overflow: hidden;      
+  }
+
+  .img-lugares {
+    border-radius: 8px 8px 0 0; /* redondea solo la parte superior */
+  }
+
+  .col-md-9 {
+    border-radius: 0 0 8px 8px; /* redondea solo la parte inferior del texto */
+  }
+
+  .selector-fecha {
+        grid-template-columns: 1fr; /* columnas apiladas en mobile */
+    }
+
+  .carousel-item .col-12.col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Ajustar controles un poco más cerca en mobile */
+  .carousel-control-prev {
+    left: -30px;
+  }
+  .carousel-control-next {
+    right: -30px;
+  }
+}
+
+@media(min-width: 768px) {
+    .acciones-reserva {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+
+
 
 
 /*  padding: 20px; Aplica a todos los lados
