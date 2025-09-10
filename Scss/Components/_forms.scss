@@ -1,0 +1,35 @@
+/*Forms*/
+@use 'base/variables' as v;
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 6px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: v.$color-primario;
+}
+
+/* inputs tipo date: mantener accesibilidad */
+input[type="date"] { 
+    padding: 6px 10px;
+}
+
+/* número de usuario estilo circular */
+.numero-usuario {
+    font-size: 15px;
+    font-weight: bold;
+    color: v.$color-primario;
+    border-radius: 50%;
+    border: 3px solid v.$color-primario;
+    width: 30px; height: 30px;
+    display: flex; justify-content: center; align-items: center;
+}

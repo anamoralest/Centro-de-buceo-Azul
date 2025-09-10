@@ -1,0 +1,73 @@
+@use 'base/variables' as v;
+@use 'components/buttons';
+/* Testimonios */
+.testimonios {
+    padding: 20px 0;
+    margin-top: v.$spacing-md;
+    h3 {
+        color: v.$color-primario;
+        font-weight: 700;
+        margin: 0 auto 0 auto;
+    }
+    .testimonio-card {
+        padding: 20px;
+        text-align: center;
+        .circle-card {
+            width: 150px;
+            height: 150px;
+            border-radius: v.$radius-round;
+            border: 3px solid v.$color-primario;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .testimonio-name {
+            font-style: italic;
+            color: v.$color-primario;
+            margin-bottom: 10px;
+        }
+
+        .testimonio-paragraph {
+            font-size: 14px;
+            color: v.$color-texto;
+            line-height: 1.5;
+        }
+    }
+
+    /* Carousel Controls */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+        background-size: 100% 100%;
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230005A1' viewBox='0 0 8 8'%3E%3Cpath d='M5.5 0l-4 4 4 4z'/%3E%3C/svg%3E");
+    }
+
+    .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230005A1' viewBox='0 0 8 8'%3E%3Cpath d='M2.5 0l4 4-4 4z'/%3E%3C/svg%3E");
+    }
+
+    #carouselTestimonios {
+        position: relative;
+        .carousel-control-prev,
+        .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        background-color: v.$color-secundario;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        .carousel-control-prev { 
+            left: -50px; 
+        }
+        .carousel-control-next { 
+            right: -50px; 
+        }
+    }
+}

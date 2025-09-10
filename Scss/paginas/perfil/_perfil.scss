@@ -1,0 +1,53 @@
+/*---------Perfil---------*/
+@use 'base/variables' as v;
+@use 'components/buttons';
+
+.perfil-section {
+    background-color: v.$color-secundario;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: v.$radius-md;
+    h1, h3 { 
+        color: v.$color-primario; 
+        margin-bottom: 1rem; 
+    }
+    .perfil-datos {
+        display: grid;
+        gap: v.$spacing-md;
+            .card-perfil {
+            background-color: #fff;
+            padding: v.$spacing-sm;
+            border-radius: v.$radius-sm;
+            h4 { color: v.$color-primario; 
+                font-size: 18px; 
+                margin-bottom: 5px; 
+            }
+            p { margin: 0; 
+                font-size: 16px; 
+                color: v.$color-texto; 
+            }
+        }
+    }
+
+    .imagen-perfil {
+        width: 150px;
+        height: 150px;
+        border-radius: v.$radius-round;
+        object-fit: cover;
+        border: 3px solid v.$color-primario;
+    }
+}
+
+/* Botones de acciones */
+.acciones {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    .btn {
+        &:hover { 
+            background-color: lighten(v.$color-primario, 60%); 
+            color: v.$color-primario; 
+        }
+    }
+}

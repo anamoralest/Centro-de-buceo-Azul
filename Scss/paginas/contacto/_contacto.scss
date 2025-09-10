@@ -1,0 +1,37 @@
+/*Contacto*/
+// paginas/contacto/_contacto.scss
+@use 'base/variables' as v;
+@use 'components/forms';
+
+.contacto-form {
+    max-width: v.$max-width;
+    margin: 20px auto;
+    background-color: v.$color-secundario;
+    padding: 20px;
+    border-radius: v.$radius-md;
+    box-sizing: border-box;
+}
+
+.contacto-form h1 { 
+    color: v.$color-primario; 
+    margin-bottom: v.$spacing-sm; 
+}
+.contacto-form p { 
+    margin-bottom: v.$spacing-sm; 
+    color: v.$color-texto; 
+}
+
+.form-label { 
+    font-weight: 700; 
+    color: v.$color-primario; 
+    margin-bottom: .25rem; 
+}
+
+.btn-enviar { 
+    @extend .btn; 
+    align-self: flex-start; 
+}
+.btn-enviar:hover { 
+    background: #fff; 
+    color: v.$color-primario; 
+}

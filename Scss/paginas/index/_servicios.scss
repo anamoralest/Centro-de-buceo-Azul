@@ -1,0 +1,59 @@
+@use 'base/variables' as v;
+@use 'components/buttons';
+/*----------Servicios--------------*/
+.servicios {
+    margin-top: v.$spacing-md;
+    h3 {
+        color: v.$color-primario;
+        font-weight: 700;
+    }
+    .servicios-card {
+        background-color: v.$color-secundario;
+        text-align: center;
+        padding: v.$spacing-sm;
+        border-radius: v.$radius-md;
+        h4, p {
+            margin: 10px 0;
+        }
+        .rectangular-card {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: v.$radius-sm;
+        }
+        .servicios-titulo {
+            font-style: italic;
+            color: v.$color-primario;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .servicio-paragraph {
+            font-size: 0.9rem;
+            color: v.$color-texto;
+            margin: 10px;
+            line-height: 1.4;
+        }
+    }
+    .presupuesto-card {
+        background-color: v.$color-secundario;
+        border-radius: v.$radius-md;
+        padding: 25px;
+        text-align: center;
+        .servicios-titulo { 
+            font-size: 20px; 
+        }
+        .servicio-paragraph { 
+            line-height: 1.5; 
+        }
+        .contactar {
+            background-color: v.$color-primario;
+            color: #fff;
+            margin-top: v.$spacing-sm;
+            &:hover {
+                background-color: #fff;
+                color: v.$color-primario;
+            }
+        }
+    }
+}
+

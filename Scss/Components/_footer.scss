@@ -1,0 +1,55 @@
+/*-----------footer-------------*/
+@use 'base/variables' as v;
+
+footer {
+    background-color: v.$color-secundario;
+    color: v.$color-primario;
+    padding: 30px 20px;
+
+    .footer {
+        .fcontacto, .fredes, .flogo {
+            margin-bottom: v.$spacing-md;
+        }
+
+        h5 {
+            color: v.$color-primario;
+            margin-bottom: v.$spacing-sm;
+            font-weight: 700;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li { 
+            color: v.$color-texto;
+        }
+        .redes-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem;
+            a {
+                color: v.$color-primario;
+                font-size: 1.6rem;
+                &:hover {
+                    color: v.$color-terciario;
+                }
+            }
+        }
+
+        .logo-footer {
+            height: 70px;
+        }
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(0,5,161,0.3);
+        text-align: center;
+        padding-top: v.$spacing-sm;
+        p {
+            margin: 0;
+            color: v.$color-texto;
+            font-size: .9rem;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@use 'base/variables';/*-para usar las variables. Se debe elegir entre una y otra. Si se usan variables no es necesario que agrege aca, pero si en cada archivo sass de las paginas-*/
+@use 'base/generales';
+@use 'base/queries';
+@use 'components/header';
+@use 'components/footer';
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/forms';
+@use 'paginas/index/hero';
+@use 'paginas/index/servicios';
+@use 'paginas/index/testimonios';
+@use 'paginas/index/infoadicional';
+@use 'paginas/lugares/lugares';
+@use 'paginas/reservar/reservar';
+@use 'paginas/contacto/contacto';
+@use 'paginas/perfil/perfil';
+@use 'paginas/misreservas/misreservas.scss';
+@use 'base/queries';
+

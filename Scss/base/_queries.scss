@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+
+/*-- media queries --*/
+
+@media (max-width: v.$bp-lg) {
+	.footer .row > div { margin-bottom: 25px; }
+	.footer .row > div:last-child { margin-bottom: 0; }
+}
+
+@media (max-width: v.$bp-md) {
+	.card-lugares { 
+		flex-direction: column;
+		border-radius: v.$radius-md;
+		overflow: hidden;
+	}
+	.img-lugares { 
+		border-radius: v.$radius-md v.$radius-md 0 0;
+	}
+	.col-md-9 { 
+		border-radius: 0 0 v.$radius-md v.$radius-md;
+	}
+	.selector-fecha {
+		grid-template-columns: 1fr;
+	}
+	.carousel-item .col-12.col-md-4 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.carousel-control-prev {
+		left: -30px;
+	}
+	.carousel-control-next {
+		right: -30px;
+	}
+}
+
+@media (min-width: v.$bp-md) {
+	.acciones-reserva {
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+}
+

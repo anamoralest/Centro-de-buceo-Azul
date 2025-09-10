@@ -1,0 +1,40 @@
+/*Cards*/
+@use 'base/variables' as v;
+
+/* card base */
+.card {
+    background-color: v.$color-secundario;
+    border-radius: v.$radius-md;
+    padding: v.$spacing-md;
+    box-sizing: border-box;
+}
+
+/* card lugares (horizontal) */
+.card-lugares {
+    @extend .card;
+    display: flex;
+    gap: v.$spacing-md;
+    overflow: hidden;
+    align-items: stretch;
+}
+
+/* imagen del lado izquierdo */
+.img-lugares {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* título/estilos */
+.lugares h3 { color: v.$color-primario; margin-bottom: 5px; }
+.tipo { font-style: italic; color: v.$color-primario; margin-bottom: 10px; }
+
+/* botón reservado para dentro de cards */
+.btn-reservar {
+    @extend .btn;
+    padding: 6px 14px;
+    border-radius: 4px;
+    display: inline-block;
+    max-width: fit-content;
+}
+.btn-reservar:hover { background-color: #fff; color: v.$color-primario; }

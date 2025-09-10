@@ -1,136 +1,180 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@charset "UTF-8";
+/*-para usar los mapas-*/
+/*-para usar las variables. Se debe elegir entre una y otra. Si se usan variables no es necesario que agrege aca, pero si en cada archivo sass de las paginas-*/
+/*Generales*/
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+html body {
+  font-family: "Saira", sans-serif;
+  min-height: 100vh; /* altura mínima igual al viewport */
+  height: 100%; /* Que el body ocupe toda la pantalla */
+  margin: 0; /* Elimina márgenes por defecto */
+  display: flex; /* Activa flexbox */
+  flex-direction: column; /* Columna: header, main, footer */
+}
 
-/*Generales*/ 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+a {
+  text-decoration: none;
+  color: #0005A1;
 }
-html body{
-    font-family: "Saira", sans-serif;
-    min-height: 100vh; /* altura mínima igual al viewport */
-    height: 100%;          /* Que el body ocupe toda la pantalla */
-    margin: 0;             /* Elimina márgenes por defecto */
-    display: flex;         /* Activa flexbox */
-    flex-direction: column;/* Columna: header, main, footer */
-}
-a{
-    text-decoration: none;
-    color: #0005A1;
-}
+
 h1 {
-    color: #0005A1;
-		font-size: 35px;
+  color: #0005A1;
+  font-size: 35px;
 }
-h2{
-	font-size: 30px;
+
+h2 {
+  font-size: 30px;
 }
-h3{
-	font-size: 25px;
+
+h3 {
+  font-size: 25px;
 }
-h4{
-	font-size: 20px;
+
+h4 {
+  font-size: 20px;
 }
+
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
 main {
-    flex: 1; 
+  flex: 1;
 }
 
 /*-------header-------*/
-/* Navbar */
 header {
-	background-color: #ffd400;
-	height: 80px;
+  background-color: #ffd400;
+  height: 80px;
 }
-header nav{
-	background-color: none;
+header nav {
+  background-color: none;
 }
-.navbar-nav li a{
-	color: #0005A1;
-	font-size: 20px;
+header nav .logo {
+  height: 60px;
 }
-.navbar-nav .nav-link:hover {
-  color: #0005A1;           /* mismo color que las letras */
-  text-decoration: underline; /* aparece subrayado */
+header nav .imagen-usuario {
+  width: 45px;
+  border-radius: 50%;
 }
-.navbar-nav .nav-link.active {
-  color: #0005A1;
-  font-weight: 700;          /* más grueso */
-  text-decoration: none;     /* sin subrayado extra */
+header nav .navbar-toggler {
+  border: none;
 }
-.logo {
-	height: 60px;
+header nav .navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+  border: none;
 }
-.imagen-usuario {
-	width: 45px;
-	border-radius: 50%;
-}
-.navbar-toggler {
-  border: none; 
-}
-.navbar-toggler-icon {
+header nav .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,5,161, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-.navbar .dropdown-toggle::after {
-  border-top-color: #0005A1 !important; /* flecha a azul */
+header nav .navbar-nav li a {
+  color: #0005A1;
+  font-size: 20px;
 }
-.navbar-toggler:active {
-  outline: none;          /* quita el outline gris */
-  box-shadow: none;
-  border: none;           /* asegura que no haya borde */
+header nav .navbar-nav li a:hover {
+  color: #0005A1;
+  text-decoration: underline;
 }
-.navbar-collapse.collapse.show {
-  background-color: #DEDFF1; /* Fondo solo cuando está abierto */
+header nav .navbar-nav li a.active {
+  color: #0005A1 !important; /*-Bootstrap lo esta cambiando-*/
+  font-weight: 700;
+  text-decoration: none;
+}
+header nav .navbar-collapse.collapse.show {
+  background-color: #dedff1;
   padding: 0.5rem 1rem;
 }
-/* Ajustar navbar-nav en menú hamburguesa abierto */
-.navbar-collapse.collapse.show .navbar-nav {
-  flex-direction: column; /* enlaces uno debajo del otro */
+header nav .navbar-collapse.collapse.show .navbar-nav {
+  flex-direction: column;
   width: 100%;
+  gap: 0 !important;
 }
-/* Links ocupando todo el ancho */
-.navbar-collapse.collapse.show .nav-link {
+header nav .navbar-collapse.collapse.show .nav-link {
   display: block;
   width: 100%;
-  margin-bottom: 0.25rem; /* separación entre links */
+  margin-bottom: 0.25rem;
   color: #0005A1;
 }
-/* Hover, foco y activo ocupando todo el ancho */
-.navbar-collapse.collapse.show .nav-link:hover,
-.navbar-collapse.collapse.show .nav-link:focus,
-.navbar-collapse.collapse.show .nav-link:active {
-  background-color: rgba(0,5,161,0.1);
+header nav .navbar-collapse.collapse.show .nav-link:hover, header nav .navbar-collapse.collapse.show .nav-link:focus, header nav .navbar-collapse.collapse.show .nav-link:active {
+  background-color: rgba(0, 5, 161, 0.1);
   border-radius: 6px;
   color: #0005A1;
 }
-/* Quitar el gap solo cuando el menú hamburguesa esté abierto */
-.navbar-collapse.collapse.show .navbar-nav {
-  gap: 0 !important; /* anula gap-4 de Bootstrap */
+header nav .dropdown-toggle::after {
+  border-top-color: #0005A1 !important;
 }
-/* Dropdown menú */
-.navbar .dropdown-menu {
-  background-color: #DEDFF1; /* Fondo azul */
-  border: none;             /* Sin bordes */
+header nav .dropdown-menu {
+  background-color: #dedff1;
+  border: none;
   padding: 8px 0;
 }
-/* Items del dropdown */
-.navbar .dropdown-menu .dropdown-item {
-  color: #0005A1;           /* Texto azul oscuro */
+header nav .dropdown-menu .dropdown-item {
+  color: #0005A1;
 }
-/* Hover de los items */
-.navbar .dropdown-menu .dropdown-item:hover {
+header nav .dropdown-menu .dropdown-item:hover {
   background-color: rgba(0, 5, 161, 0.1);
   color: #0005A1;
 }
 
+/*-----------footer-------------*/
+footer {
+  background-color: #ffd400;
+  color: #0005A1;
+  padding: 30px 20px 20px;
+}
 
+.footer.container {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
 
+/* Contacto */
+.fcontacto ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
 
+/* Redes sociales */
+.redes-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+.redes-links a {
+  color: #0005A1;
+  font-size: 32px;
+}
+
+.redes-links a:hover {
+  color: #ffffff;
+}
+
+/* Logo */
+.logo-footer {
+  height: 70px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 5, 161, 0.3);
+}
 
 /*-------------------------*/
 /* Hero Section */
@@ -152,7 +196,7 @@ header nav{
   border-radius: 8px;
   text-align: center;
   max-width: 700px; /* no se estira demasiado en desktop */
-  margin: 0 auto;   /* centrado en mobile */
+  margin: 0 auto; /* centrado en mobile */
 }
 
 .hero-texto h1 {
@@ -186,15 +230,14 @@ header nav{
 
 .boton-reservar:hover {
   background-color: #DEDFF1;
-	color:#0005A1;
+  color: #0005A1;
 }
-
-
 
 /*----------Servicios--------------*/
-.servicios{
-	margin-top: 20px;
+.servicios {
+  margin-top: 20px;
 }
+
 .servicios h3 {
   color: #0005A1;
   font-weight: 700;
@@ -207,7 +250,6 @@ header nav{
   padding: 15px;
   border-radius: 8px;
 }
-
 
 .servicios-card h4,
 .servicios-card p {
@@ -260,19 +302,17 @@ header nav{
 
 .contactar:hover {
   background-color: #ffffff;
-	color:#0005A1;
+  color: #0005A1;
 }
-
-
 
 /* Testimonios */
 .testimonios {
   padding: 20px 0;
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 .testimonios h3 {
-	color: #0005A1;
+  color: #0005A1;
   font-weight: 700;
   margin: 0 auto 0px auto;
 }
@@ -330,8 +370,8 @@ header nav{
   width: 40px;
   height: 40px;
   top: 50%;
-  background-color: #DEDFF1; /* opcional: fondo detrás de la flecha */
-  border-radius: 50%;         /* opcional: círculo */
+  background-color: #DEDFF1; /* fondo detrás de la flecha */
+  border-radius: 50%; /* círculo */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -345,53 +385,47 @@ header nav{
   right: -50px; /* distancia a la derecha del carrusel */
 }
 
-
-
 /* Info Adicional */
 .info-adicional {
-    background-color: #dedff1;
-    margin-bottom: 24px;
+  background-color: #dedff1;
+  margin-bottom: 24px;
 }
 
 .info-card {
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    text-align: left;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  text-align: left;
 }
 
 .info-card h3 {
-    color: #0005A1;
-    margin-bottom: 15px;
+  color: #0005A1;
+  margin-bottom: 15px;
 }
 
 .info-card p,
 .info-card ul li {
-    font-size: 14px;
-    color: #2a2a2a;
-    line-height: 1.5;
+  font-size: 14px;
+  color: #2a2a2a;
+  line-height: 1.5;
 }
 
-
-
-
-
-/*------------------------------------------------*/
 /*----LUGARES--*/
-.lugares{
-	margin: 20px 0px 40px;
-	text-align: start;
+.lugares {
+  margin: 20px 0px 40px;
+  text-align: start;
 }
+
 .card-lugares {
   background-color: #dedff1;
   border-radius: 8px;
 }
 
 .img-lugares {
-  width:100%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
-	border-radius: 8px 0 0 8px;
+  border-radius: 8px 0 0 8px;
 }
 
 .lugares-texto h3 {
@@ -413,253 +447,246 @@ header nav{
   border-radius: 4px;
   font-weight: bold;
   display: inline-block;
-	max-width: fit-content;
+  max-width: fit-content;
 }
 
 .btn-reservar:hover {
   background-color: #ffffff;
-	color:#0005A1;
+  color: #0005A1;
 }
 
-
-
-/*-----------------------------*/
 /*Revervar*/
-.reserva-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0px;
-		width: 100%;
+.reserva-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px;
+  width: 100%;
 }
-.reserva-form h1{
-    width: 1040px;
+
+.reserva-form h1 {
+  width: 1040px;
 }
+
 .reserva-card {
-    width: 100%;         /* ocupa todo el ancho del container */
-    background-color: #dedff1;
-    border-radius: 8px;
+  width: 100%; /* ocupa todo el ancho del container */
+  background-color: #dedff1;
+  border-radius: 8px;
 }
+
 .reserva-card select {
-    padding: 8px;
-    font-size: 14px;
-    height: 36px;;
-    width: 700px;
+  padding: 8px;
+  font-size: 14px;
+  height: 36px;
+  width: 700px;
 }
+
 .reserva-card select,
 .datos-form .form-control {
-    width: 100%;
-    max-width: 100%;
+  width: 100%;
+  max-width: 100%;
 }
-
 
 /*-fecha-*/
 .selector-fecha {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* 1/3 calendario, 2/3 texto */
-    gap: 30px;
-    max-width: 1040px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  max-width: 1040px;
+  margin: 0 auto;
 }
 
 .fecha-calendario {
-    margin-top: 10px;
-    padding: 10px;
-    background-color:#ffffff;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffffff;
 }
 
 .calendario-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #0005A1;
-    color: #fff;
-    padding: 5px 10px;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0005A1;
+  color: #fff;
+  padding: 5px 10px;
+  margin-bottom: 10px;
 }
 
 .calendario-header button {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 18px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
 }
 
 .dias-semana, .dias-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
 }
 
 .dias-semana span {
-    font-weight: bold;
-    padding: 5px 0;
+  font-weight: bold;
+  padding: 5px 0;
 }
 
-
 .dias-grid span:hover {
-    background: #DEDFF1;
+  background: #DEDFF1;
 }
 
 .texto-fecha h4 {
-    color: #0005A1;
-    margin-bottom: 10px;
+  color: #0005A1;
+  margin-bottom: 10px;
 }
 
 .texto-fecha ul {
-    list-style: disc;
-    padding-left: 20px;
-    margin-top: 10px;
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
 .datos {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    gap: 20px;
-    align-items: start;
-    margin-bottom: 20px;
-    padding: 15px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 20px;
+  padding: 15px;
 }
 
 .datos-form {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px 20px;
 }
 
 .numero-usuario {
-    font-size: 15px;
-    font-weight: bold;
-    color: #0005A1;
-    border-radius: 50%;
-    border: 3px solid #0005A1;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #0005A1;
+  border-radius: 50%;
+  border: 3px solid #0005A1;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 /*-Importante-*/
 .info-importante {
-    font-size: 16px;
-    margin: 20px 40px;
+  font-size: 16px;
+  margin: 20px 40px;
 }
 
 .info-importante ul {
-    margin-bottom: 20px;
-    padding-left: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 
 .info-importante li {
-    margin-bottom: 10px;
-    line-height: 1.4;
+  margin-bottom: 10px;
+  line-height: 1.4;
 }
 
 .acciones-reserva {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .acepto-reglas {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    gap: 8px;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 8px;
+  text-align: center;
 }
 
 .btn-confirmar {
-	background-color:#0005A1;
-	color: #ffffff;
-	text-decoration: none;
-	text-align: center;
+  background-color: #0005A1;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
   padding: 6px 14px;
   border-radius: 4px;
   font-weight: bold;
 }
+
 .btn-confirmar:hover {
   background-color: #ffffff;
-	color:#0005A1;
+  color: #0005A1;
 }
 
-
-
-
-
-
-/*----------------------------------------*/
 /*Contacto*/
 .contacto-form {
-    max-width: 1040px;       /* limita el ancho */
-    margin: 20px auto;       /* centra horizontalmente */
-    display: flex;
-    flex-direction: column;
-    background-color: #dedff1;
-    padding: 15px;
-		border-radius: 8px;
+  max-width: 1040px; /* limita el ancho, no tocar */
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #dedff1;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 .contacto-form a {
-    background-color: #0005A1;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-align: center;
-    align-self: center;       /* centra el botón */
-    margin-top: 10px;
+  background-color: #0005A1;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+  align-self: center;
+  margin-top: 10px;
 }
 
 .contacto-form h2 {
-    color: #0005A1;
-    margin-bottom: 10px;
+  color: #0005A1;
+  margin-bottom: 10px;
 }
 
 .contacto-form p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form-group {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .contacto-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .form-group input, .form-group textarea {
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    width: 100%;
-    box-sizing: border-box;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .btn-enviar {
-	background-color:#0005A1;
-	color: #ffffff;
-	text-decoration: none;
-	text-align: center;
+  background-color: #0005A1;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
   padding: 6px 14px;
   border-radius: 4px;
   font-weight: bold;
 }
+
 .btn-enviar:hover {
   background-color: #ffffff;
-	color:#0005A1;
+  color: #0005A1;
 }
 
-/*----------------------*/
 /*---------Perfil---------*/
 .perfil-section {
   background-color: #dedff1;
-	margin-top: 20px;
+  margin-top: 20px;
   padding: 20px;
   border-radius: 8px;
 }
@@ -685,11 +712,12 @@ header nav{
 }
 
 /* Botones */
-.acciones{
-	margin-bottom: 20px;
+.acciones {
+  margin-bottom: 20px;
 }
-.btn { 
-  background-color:#0005A1;
+
+.btn {
+  background-color: #0005A1;
   color: #ffffff;
   text-decoration: none;
   text-align: center;
@@ -697,13 +725,12 @@ header nav{
   border-radius: 4px;
   font-weight: bold;
 }
-.btn:hover { 
+
+.btn:hover {
   background-color: #d0e9ff;
-  color:#0005A1;
+  color: #0005A1;
 }
 
-
-/*------------------------------*/
 /*Mis Reservas*/
 .reservas-container {
   background-color: #dedff1;
@@ -781,95 +808,34 @@ header nav{
   background-color: rgba(93, 173, 226, 0.08);
 }
 
-
-
-
-
-/*------------------------*/
-footer {
-    background-color: #FFD400;
-    color: #0005A1;
-    padding: 30px 20px 20px;
-}
-.footer.container {
-  max-width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-/* Contacto */
-.fcontacto ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-/* Redes sociales */
-.redes-links {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 10px;
-}
-
-.redes-links a {
-    color: #0005A1;
-    font-size: 32px;
-}
-
-.redes-links a:hover {
-  color: #ffffff;
-}
-
-/* Logo */
-.logo-footer {
-  height: 70px;
-}
-
-/* Footer bottom */
-.footer-bottom {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 12px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(0,5,161,0.3);
-}
-
 /*--media queries-*/
-
 @media (max-width: 991px) {
   .footer .row > div {
-    margin-bottom: 25px; 
+    margin-bottom: 25px;
   }
-
   .footer .row > div:last-child {
-    margin-bottom: 0; 
+    margin-bottom: 0;
   }
 }
-
 @media (max-width: 768px) {
   .card-lugares {
-    flex-direction: column; 
-    border-radius: 8px;     
-    overflow: hidden;      
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
   }
-
   .img-lugares {
     border-radius: 8px 8px 0 0; /* redondea solo la parte superior */
   }
-
   .col-md-9 {
     border-radius: 0 0 8px 8px; /* redondea solo la parte inferior del texto */
   }
-
   .selector-fecha {
-        grid-template-columns: 1fr; /* columnas apiladas en mobile */
-    }
-
+    grid-template-columns: 1fr; /* columnas apiladas en mobile */
+  }
   .carousel-item .col-12.col-md-4 {
     flex: 0 0 100%;
     max-width: 100%;
   }
-
   /* Ajustar controles un poco más cerca en mobile */
   .carousel-control-prev {
     left: -30px;
@@ -878,20 +844,11 @@ footer {
     right: -30px;
   }
 }
-
-@media(min-width: 768px) {
-    .acciones-reserva {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
+@media (min-width: 768px) {
+  .acciones-reserva {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
-
-
-
-
-/*  padding: 20px; Aplica a todos los lados
-    padding: 20px 30px; 1° Aplica a top y bottom y 2° aplica a left y right
-    padding: 20px 30px 40px; 1° Aplica para el top, el 2° aplica para el left y right y el 3° aplcia para el bottom
-    padding: 20px 30px 40px 50px; 1° top, 2°Right. 3°Bottom y 4°Left */
-
+/*# sourceMappingURL=style.css.map */
