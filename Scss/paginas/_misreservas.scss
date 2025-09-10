@@ -1,23 +1,27 @@
 /*Mis Reservas*/
-@use 'base/variables' as v;
-@use 'components/buttons';
+@use '../base/variables';
+@use '../components/forms';
+@use '../components/buttons';
 
 .reservas-container {
-    background-color: v.$color-secundario;
-    padding: v.$spacing-md;
-    border-radius: v.$radius-md;
+    background-color: variables.$color-secundario;
+    padding: variables.$spacing-md;
+    border-radius: variables.$radius-md;
     margin: 20px auto;
 
-    h1 { color: v.$color-primario; margin-bottom: v.$spacing-md; }
+    h1 { 
+        color: variables.$color-primario; 
+        margin-bottom: variables.$spacing-md; 
+    }
 
     .table-responsive {
         .tabla-reservas {
             width: 100%;
             background: #fff;
-            border-radius: v.$radius-sm;
+            border-radius: variables.$radius-sm;
             overflow: hidden;
             th {
-                background-color: v.$color-primario;
+                background-color: variables.$color-primario;
                 color: #fff;
                 text-align: center;
                 padding: 12px;
@@ -33,7 +37,7 @@
             .estado {
                 display: inline-block;
                 padding: 4px 10px;
-                border-radius: v.$radius-sm;
+                border-radius: variables.$radius-sm;
                 font-size: 13px;
                 font-weight: 600;
                 border: 1px solid transparent;
@@ -45,13 +49,13 @@
                     background-color: rgba(46,64,83,0.05); 
                 }
                 &.incompleta { 
-                    color: v.$color-alerta; 
-                    border-color: v.$color-alerta; 
+                    color: variables.$color-alerta; 
+                    border-color: variables.$color-alerta; 
                     background-color: rgba(255,114,98,0.08); 
                 }
                 &.confirmado { 
-                    color: v.$color-primario; 
-                    border-color: v.$color-primario; 
+                    color: variables.$color-primario; 
+                    border-color: variables.$color-primario; 
                     background-color: rgba(0,5,161,0.05); 
                 }
                 &.pendiente { 
@@ -69,13 +73,7 @@
 
         .d-flex {
             justify-content: flex-end;
-            margin-top: v.$spacing-md;
-            .btn-reservar {
-                &:hover { 
-                    background-color: lighten(v.$color-primario, 60%); 
-                    color: v.$color-primario; 
-                }
-            }
+            margin-top: variables.$spacing-md;
         }
     }
 }

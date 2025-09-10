@@ -1,19 +1,24 @@
 /*-----------footer-------------*/
-@use 'base/variables' as v;
+@use '../base/variables';
 
 footer {
-    background-color: v.$color-secundario;
-    color: v.$color-primario;
+    background-color: variables.$color-terciario;
+    color: variables.$color-primario;
     padding: 30px 20px;
 
     .footer {
+        max-width: 100%;
         .fcontacto, .fredes, .flogo {
-            margin-bottom: v.$spacing-md;
+            margin-bottom: variables.$spacing-md;
         }
-
+        .flogo{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
         h5 {
-            color: v.$color-primario;
-            margin-bottom: v.$spacing-sm;
+            color: variables.$color-primario;
+            margin-bottom: variables.$spacing-sm;
             font-weight: 700;
         }
         ul {
@@ -22,17 +27,17 @@ footer {
             margin: 0;
         }
         li { 
-            color: v.$color-texto;
+            color: variables.$color-texto;
         }
         .redes-links {
             display: flex;
             justify-content: center;
             gap: 1.25rem;
             a {
-                color: v.$color-primario;
+                color: variables.$color-primario;
                 font-size: 1.6rem;
                 &:hover {
-                    color: v.$color-terciario;
+                    color: variables.$color-secundario;
                 }
             }
         }
@@ -45,10 +50,10 @@ footer {
     .footer-bottom {
         border-top: 1px solid rgba(0,5,161,0.3);
         text-align: center;
-        padding-top: v.$spacing-sm;
+        padding-top: variables.$spacing-sm;
         p {
             margin: 0;
-            color: v.$color-texto;
+            color: variables.$color-texto;
             font-size: .9rem;
         }
     }

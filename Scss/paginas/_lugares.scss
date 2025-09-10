@@ -1,25 +1,29 @@
 /*----LUGARES--*/
-@use 'base/variables' as v;
-@use 'components/cards';
+@use '../base/variables';
+@use '../components/forms';
+@use '../components/buttons';
+
 
 .lugares {
     margin: 20px 0 40px;
     text-align: start;
     .titulo-seccion { 
-        max-width: v.$max-width; margin: 0; color: v.$color-primario; 
+        max-width: variables.$max-width; 
+        margin: 0; color: 
+        variables.$color-primario; 
     }
     .subtitulo-seccion { 
-        max-width: v.$max-width; color: v.$color-texto; 
+        max-width: variables.$max-width; 
+        color: variables.$color-texto; 
     }
     .card-lugares {
-        @extend .card; /* from components */
         display: flex;
-        gap: v.$spacing-md;
+        gap: variables.$spacing-md;
         align-items: stretch;
         padding: 0;
         overflow: hidden;
-        border-radius: v.$radius-md;
-        background-color: v.$color-secundario;
+        border-radius: variables.$radius-md;
+        background-color: variables.$color-secundario;
     }
     .img-lugares {
         width: 100%;
@@ -36,21 +40,20 @@
         padding: 1rem; 
     }
     h3 { 
-        color: v.$color-primario; 
+        color: variables.$color-primario; 
         margin-bottom: 6px; 
     }
     .tipo { 
         font-style: italic; 
-        color: v.$color-primario; 
+        color: variables.$color-primario; 
         margin-bottom: 10px; 
     }
-    .btn-reservar { 
-        @extend .btn; 
+    .btn-reservar {
         padding: 6px 14px; 
         margin-left: auto; 
     }
     .btn-reservar:hover { 
         background: #fff; 
-        color: v.$color-primario; 
+        color: variables.$color-primario; 
     }
 }

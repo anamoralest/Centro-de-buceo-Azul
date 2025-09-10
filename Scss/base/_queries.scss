@@ -1,23 +1,24 @@
-@use 'base/variables' as v;
+@use './variables';
 
 /*-- media queries --*/
 
-@media (max-width: v.$bp-lg) {
+@media (max-width: variables.$bp-lg) {
 	.footer .row > div { margin-bottom: 25px; }
 	.footer .row > div:last-child { margin-bottom: 0; }
+	
 }
 
-@media (max-width: v.$bp-md) {
+@media (max-width: variables.$bp-md) {
 	.card-lugares { 
 		flex-direction: column;
-		border-radius: v.$radius-md;
+		border-radius: variables.$radius-md;
 		overflow: hidden;
 	}
 	.img-lugares { 
-		border-radius: v.$radius-md v.$radius-md 0 0;
+		border-radius: variables.$radius-md variables.$radius-md 0 0;
 	}
 	.col-md-9 { 
-		border-radius: 0 0 v.$radius-md v.$radius-md;
+		border-radius: 0 0 variables.$radius-md variables.$radius-md;
 	}
 	.selector-fecha {
 		grid-template-columns: 1fr;
@@ -32,12 +33,16 @@
 	.carousel-control-next {
 		right: -30px;
 	}
+	.reserva-card { 
+        padding: 12px; 
+    }
 }
 
-@media (min-width: v.$bp-md) {
+@media (min-width: variables.$bp-md) {
 	.acciones-reserva {
 		flex-direction: row;
 		justify-content: flex-start;
 	}
+	
 }
 

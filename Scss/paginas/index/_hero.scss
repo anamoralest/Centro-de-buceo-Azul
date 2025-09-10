@@ -1,42 +1,42 @@
-@use 'base/variables' as v;
-@use 'components/buttons';
+@use '../../base/variables';
+@use '../../components/buttons';
 /* Hero Section */
 .hero {
     background-image: url("../IMG/hero_section.png");
     background-size: cover;
     background-position: center;
     width: 100%;
-    padding: v.$spacing-lg;
-    margin-top: v.$spacing-md;
+    padding: variables.$spacing-lg;
+    margin-top: variables.$spacing-md;
     display: flex;
     align-items: center;
     .hero-texto {
         background-color: #fff;
-        padding: v.$spacing-md;
-        border-radius: v.$radius-md;
+        padding: variables.$spacing-md;
+        border-radius: variables.$radius-md;
         text-align: center;
         max-width: 700px;
         margin: 0 auto;
         h1 {
             margin-bottom: 10px;
-            color: v.$color-acento;
+            color: variables.$color-terciario;
             font-weight: 600;
         }
         .hero-subtitle {
-            color: v.$color-primario;
+            color: variables.$color-primario;
             font-size: 20px;
             margin-bottom: 15px;
             font-weight: 600;
         }
         p {
             margin-bottom: 25px;
-            color: v.$color-texto;
+            color: variables.$color-texto;
         }
         .boton-reservar {
-            background-color: v.$color-primario;
+            background-color: variables.$color-primario;
             &:hover {
                 background-color: #fff;
-                color: v.$color-primario;
+                color: variables.$color-primario;
             }
         }
     }

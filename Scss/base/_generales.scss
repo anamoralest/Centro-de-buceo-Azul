@@ -1,5 +1,5 @@
 /*Generales*/ 
-@use 'base/variables' as v;
+@use './variables';
 /*fuentes*/
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 *{
@@ -10,8 +10,8 @@
 /* layout base */
 html, body {
     height: 100%;
-    font-family: v.$font-base;
-    color: v.$color-texto;
+    font-family: variables.$font-base;
+    color: variables.$color-texto;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -25,22 +25,22 @@ main {
 /* enlaces */
 a { 
     text-decoration: none;
-    color: v.$color-primario;
+    color: variables.$color-primario;
 }
 
 /* headings */
 h1 { 
-    color: v.$color-primario; 
-    font-size: v.$h1-size;
+    color: variables.$color-primario; 
+    font-size: variables.$h1-size;
 }
 h2 { 
-    font-size: v.$h2-size;
+    font-size: variables.$h2-size;
 }
 h3 { 
-    font-size: v.$h3-size;
+    font-size: variables.$h3-size;
 }
 h4 { 
-    font-size: v.$h4-size;
+    font-size: variables.$h4-size;
 }
 
 /* imagenes */

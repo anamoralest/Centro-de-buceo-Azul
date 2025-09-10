@@ -1,35 +1,39 @@
-@use 'base/variables' as v;
-@use 'components/buttons';
+@use '../../base/variables';
+@use '../../components/buttons';
 /* Testimonios */
 .testimonios {
     padding: 20px 0;
-    margin-top: v.$spacing-md;
+    margin-top: variables.$spacing-md;
     h3 {
-        color: v.$color-primario;
+        color: variables.$color-primario;
         font-weight: 700;
         margin: 0 auto 0 auto;
     }
     .testimonio-card {
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
         .circle-card {
             width: 150px;
             height: 150px;
-            border-radius: v.$radius-round;
-            border: 3px solid v.$color-primario;
+            border-radius: variables.$radius-round;
+            border: 3px solid variables.$color-primario;
             object-fit: cover;
             margin-bottom: 15px;
+            justify-content: center;
         }
 
         .testimonio-name {
             font-style: italic;
-            color: v.$color-primario;
+            color: variables.$color-primario;
             margin-bottom: 10px;
         }
 
         .testimonio-paragraph {
             font-size: 14px;
-            color: v.$color-texto;
+            color: variables.$color-texto;
             line-height: 1.5;
         }
     }
@@ -57,7 +61,7 @@
         width: 40px;
         height: 40px;
         top: 50%;
-        background-color: v.$color-secundario;
+        background-color: variables.$color-secundario;
         border-radius: 50%;
         display: flex;
         align-items: center;

@@ -1,5 +1,5 @@
 /*Forms*/
-@use 'base/variables' as v;
+@use '../base/variables';
 
 .form-control {
     display: block;
@@ -15,7 +15,7 @@ label {
     display: inline-block;
     margin-bottom: 6px;
     font-weight: 600;
-    color: v.$color-primario;
+    color: variables.$color-primario;
 }
 
 /* inputs tipo date: mantener accesibilidad */
@@ -27,9 +27,9 @@ input[type="date"] {
 .numero-usuario {
     font-size: 15px;
     font-weight: bold;
-    color: v.$color-primario;
+    color: variables.$color-primario;
     border-radius: 50%;
-    border: 3px solid v.$color-primario;
+    border: 3px solid variables.$color-primario;
     width: 30px; height: 30px;
     display: flex; justify-content: center; align-items: center;
 }

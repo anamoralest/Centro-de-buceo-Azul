@@ -1,20 +1,19 @@
+@use'../base/variables';
 /*-------header-------*/
-@use 'base/variables' as v;
 
 header {
-	background-color: v.$color-terciario;
-	height: v.$header-height;
-
+	background-color: variables.$color-terciario;
+	height: variables.$header-height;
 	nav {
-		background-color: transparent;
+		background-color: none;
 		.logo { 
-			height: v.$logo-height;
+			height: variables.$logo-height;
 		}
 		.imagen-usuario {
-		width: v.$user-img-size;
-		height: v.$user-img-size;
-		border-radius: v.$radius-round;
-		object-fit: cover;
+			width: variables.$user-img-size;
+			height: variables.$user-img-size;
+			border-radius: variables.$radius-round;
+			object-fit: cover;
 		}
 		.navbar-toggler {
 			border: none;
@@ -30,17 +29,24 @@ header {
 		.navbar-nav {
 			li {
 				a {
-				color: v.$color-primario;
-				font-size: 20px;
-				&:hover { color: v.$color-primario; text-decoration: underline; }
-				&.active { color: v.$color-primario !important; font-weight: 700; text-decoration: none; }
+					color: variables.$color-primario;
+					font-size: 20px;
+					&:hover { 
+						color: variables.$color-primario; 
+						text-decoration: underline; 
+					}
+					&.active { 
+						color: variables.$color-primario !important; 
+						font-weight: 700; 
+						text-decoration: none; 
+					}
 				}
 			}
 		}
 
 		.navbar-collapse {
 			&.collapse.show {
-				background-color: v.$color-secundario;
+				background-color: variables.$color-secundario;
 				padding: 0.5rem 1rem;
 				.navbar-nav { 
 					flex-direction: column;
@@ -48,22 +54,22 @@ header {
 					gap: 0 !important;
 				}
 				.nav-link {
-				display: block; width: 100%; margin-bottom: 0.25rem; color: v.$color-primario;
-				&:hover, &:focus, &:active { background-color: v.$hover-nav; border-radius: 6px; color: v.$color-primario; }
+				display: block; width: 100%; margin-bottom: 0.25rem; color: variables.$color-primario;
+				&:hover, &:focus, &:active { background-color: variables.$hover-nav; border-radius: 6px; color: variables.$color-primario; }
 				}
 			}
 		}
 		.dropdown-toggle::after {
-			border-top-color: v.$color-primario !important;
+			border-top-color: variables.$color-primario !important;
 		}
 		.dropdown-menu {
-			background-color: v.$color-secundario;
+			background-color: variables.$color-secundario;
 			border: none;
 			padding: 8px 0;
 			.dropdown-item {
-				color: v.$color-primario;
+				color: variables.$color-primario;
 				&:hover {
-					background-color: v.$hover-nav; color: v.$color-primario;
+					background-color: variables.$hover-nav; color: variables.$color-primario;
 				}
 			}
 		}

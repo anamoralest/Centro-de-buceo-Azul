@@ -1,21 +1,21 @@
-@use 'base/variables' as v;
-@use 'components/buttons';
+@use '../../base/variables';
+@use '../../components/buttons';
 /* Info Adicional */
 .info-adicional {
-    background-color: v.$color-secundario;
-    margin-bottom: v.$spacing-md;
+    background-color: variables.$color-secundario;
+    margin-bottom: variables.$spacing-md;
     .info-card {
-        padding: v.$spacing-md;
+        padding: variables.$spacing-md;
         background-color: #fff;
-        border-radius: v.$radius-md;
+        border-radius: variables.$radius-md;
         text-align: left;
         h3 { 
-            color: v.$color-primario; 
+            color: variables.$color-primario; 
             margin-bottom: 15px; 
         }
         p, ul li { 
             font-size: 14px; 
-            color: v.$color-texto; 
+            color: variables.$color-texto; 
             line-height: 1.5; 
         }
     }

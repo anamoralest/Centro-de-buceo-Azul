@@ -1,6 +1,7 @@
 /*Revervar*/
-@use 'base/variables' as v;
-@use 'components/forms';
+@use '../base/variables';
+@use '../components/forms';
+@use '../components/buttons';
 
 .reserva-form {
     width: 100%;
@@ -9,20 +10,20 @@
     align-items: center;
     margin: 20px 0;
 
-    h1 { max-width: v.$max-width; 
+    h1 { 
+        max-width: variables.$max-width; 
         width: 100%; 
-        color: v.$color-primario; 
-        margin-bottom: v.$spacing-sm; 
+        color: variables.$color-primario; 
+        margin-bottom: variables.$spacing-sm; 
     }
 }
 
 .reserva-card {
     width: 100%;
-    max-width: v.$max-width;
-    background-color: v.$color-secundario;
-    border-radius: v.$radius-md;
-    padding: v.$spacing-md;
-    margin: v.$spacing-md auto;
+    background-color: variables.$color-secundario;
+    border-radius: variables.$radius-md;
+    padding: variables.$spacing-md;
+    margin: variables.$spacing-md auto;
     box-sizing: border-box;
 }
 
@@ -31,17 +32,17 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 30px;
-    max-width: v.$max-width;
+    max-width: variables.$max-width;
     margin: 0 auto;
 }
 
 .fecha-calendario { 
     background: #fff; 
     padding: 10px; 
-    border-radius: v.$radius-sm; 
+    border-radius: variables.$radius-sm; 
 }
 .calendario-header { 
-    background: v.$color-primario; 
+    background: variables.$color-primario; 
     color: #fff; 
     padding: 6px 10px; 
     border-radius: 4px; 
@@ -56,7 +57,7 @@
     gap:4px; 
 }
 .dias-grid span:hover { 
-    background: v.$color-secundario; 
+    background: variables.$color-secundario; 
     border-radius: 4px; 
 }
 
@@ -66,27 +67,3 @@
     gap: 15px; 
 }
 
-/* boton confirmar */
-.btn-confirmar { 
-    @extend .btn; 
-    display: inline-block; 
-}
-.btn-confirmar:hover { 
-    background: #fff; 
-    color: v.$color-primario; 
-}
-
-/* numero usuario */
-.numero-usuario { 
-    @extend .numero-usuario; 
-}
-
-/* pequeños ajustes */
-@media (max-width: v.$bp-md) {
-    .selector-fecha { 
-        grid-template-columns: 1fr; 
-    }
-    .reserva-card { 
-        padding: 12px; 
-    }
-}

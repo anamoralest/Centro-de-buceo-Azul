@@ -1,19 +1,18 @@
 /*Cards*/
-@use 'base/variables' as v;
+@use '../base/variables';
 
 /* card base */
 .card {
-    background-color: v.$color-secundario;
-    border-radius: v.$radius-md;
-    padding: v.$spacing-md;
+    background-color: variables.$color-secundario;
+    border-radius: variables.$radius-md;
+    padding: variables.$spacing-md;
     box-sizing: border-box;
 }
 
 /* card lugares (horizontal) */
 .card-lugares {
-    @extend .card;
     display: flex;
-    gap: v.$spacing-md;
+    gap: variables.$spacing-md;
     overflow: hidden;
     align-items: stretch;
 }
@@ -26,15 +25,14 @@
 }
 
 /* título/estilos */
-.lugares h3 { color: v.$color-primario; margin-bottom: 5px; }
-.tipo { font-style: italic; color: v.$color-primario; margin-bottom: 10px; }
+.lugares h3 { color: variables.$color-primario; margin-bottom: 5px; }
+.tipo { font-style: italic; color: variables.$color-primario; margin-bottom: 10px; }
 
 /* botón reservado para dentro de cards */
 .btn-reservar {
-    @extend .btn;
     padding: 6px 14px;
     border-radius: 4px;
     display: inline-block;
     max-width: fit-content;
 }
-.btn-reservar:hover { background-color: #fff; color: v.$color-primario; }
+.btn-reservar:hover { background-color: #fff; color: variables.$color-primario; }
