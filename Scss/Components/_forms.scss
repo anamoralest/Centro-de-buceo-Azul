@@ -18,12 +18,10 @@ label {
     color: variables.$color-primario;
 }
 
-/* inputs tipo date: mantener accesibilidad */
 input[type="date"] { 
     padding: 6px 10px;
 }
 
-/* número de usuario estilo circular */
 .numero-usuario {
     font-size: 15px;
     font-weight: bold;

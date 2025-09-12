@@ -10,6 +10,13 @@
     padding: 20px;
     border-radius: variables.$radius-md;
     box-sizing: border-box;
+    input, textarea{
+        &:focus {
+        border-color: variables.$color-primario;
+        box-shadow: 0 0 6px rgba(0, 5, 161, 0.2);
+        outline: none;
+        }
+    }
 }
 
 .contacto-form h1 { 

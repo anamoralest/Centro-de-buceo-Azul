@@ -26,6 +26,13 @@
     margin: variables.$spacing-md auto;
     box-sizing: border-box;
 }
+.form-select{
+    &:focus {
+    border-color: variables.$color-primario;
+    box-shadow: 0 0 6px rgba(0, 5, 161, 0.2);
+    outline: none;
+    }
+}
 
 /* Selector fecha */
 .selector-fecha {
@@ -56,9 +63,16 @@
     text-align:center; 
     gap:4px; 
 }
-.dias-grid span:hover { 
-    background: variables.$color-secundario; 
-    border-radius: 4px; 
+.dias-grid span {
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    border-radius: 50%;
+
+    &:hover {
+        background: variables.$color-secundario;
+        border-radius: 50%;
+        transform: scale(1.1);
+    }
 }
 
 .datos-form { 
@@ -66,4 +80,11 @@
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); 
     gap: 15px; 
 }
-
+.datos-form input {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    &:focus {
+    border-color: variables.$color-primario;
+    box-shadow: 0 0 6px rgba(0, 5, 161, 0.2);
+    outline: none;
+    }
+}
