@@ -1,0 +1,38 @@
+/*Cards*/
+@use '../base/variables';
+
+/* card base */
+.card {
+    background-color: variables.$color-secundario;
+    border-radius: variables.$radius-md;
+    padding: variables.$spacing-md;
+    box-sizing: border-box;
+}
+
+/* card lugares (horizontal) */
+.card-lugares {
+    display: flex;
+    gap: variables.$spacing-md;
+    overflow: hidden;
+    align-items: stretch;
+}
+
+/* imagen del lado izquierdo */
+.img-lugares {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* título/estilos */
+.lugares h3 { color: variables.$color-primario; margin-bottom: 5px; }
+.tipo { font-style: italic; color: variables.$color-primario; margin-bottom: 10px; }
+
+/* botón reservado para dentro de cards */
+.btn-reservar {
+    padding: 6px 14px;
+    border-radius: 4px;
+    display: inline-block;
+    max-width: fit-content;
+}
+.btn-reservar:hover { background-color: #fff; color: variables.$color-primario; }

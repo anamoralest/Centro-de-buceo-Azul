@@ -1,0 +1,43 @@
+/*Contacto*/
+@use '../base/variables';
+@use '../components/forms';
+@use '../components/buttons';
+
+.contacto-form {
+    max-width: variables.$max-width;
+    margin: 20px auto;
+    background-color: variables.$color-secundario;
+    padding: 20px;
+    border-radius: variables.$radius-md;
+    box-sizing: border-box;
+    input, textarea{
+        &:focus {
+        border-color: variables.$color-primario;
+        box-shadow: 0 0 6px rgba(0, 5, 161, 0.2);
+        outline: none;
+        }
+    }
+}
+
+.contacto-form h1 { 
+    color: variables.$color-primario; 
+    margin-bottom: variables.$spacing-sm; 
+}
+.contacto-form p { 
+    margin-bottom: variables.$spacing-sm; 
+    color: variables.$color-texto; 
+}
+
+.form-label { 
+    font-weight: 700; 
+    color: variables.$color-primario; 
+    margin-bottom: .25rem; 
+}
+
+.btn-enviar {
+    align-self: flex-start; 
+}
+.btn-enviar:hover { 
+    background: #fff; 
+    color: variables.$color-primario; 
+}

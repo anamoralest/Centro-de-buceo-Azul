@@ -1,0 +1,22 @@
+@use '../../base/variables';
+@use '../../components/buttons';
+/* Info Adicional */
+.info-adicional {
+    background-color: variables.$color-secundario;
+    margin-bottom: variables.$spacing-md;
+    .info-card {
+        padding: variables.$spacing-md;
+        background-color: #fff;
+        border-radius: variables.$radius-md;
+        text-align: left;
+        h3 { 
+            color: variables.$color-primario; 
+            margin-bottom: 15px; 
+        }
+        p, ul li { 
+            font-size: 14px; 
+            color: variables.$color-texto; 
+            line-height: 1.5; 
+        }
+    }
+}

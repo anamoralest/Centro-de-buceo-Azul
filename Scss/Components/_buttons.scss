@@ -1,0 +1,23 @@
+/*Botones*/
+@use '../base/variables';
+
+/* botón base */
+.btn {
+    display: inline-block;
+    background-color: variables.$color-primario;
+    color: #fff;
+    padding: variables.$btn-padding;
+    border-radius: variables.$radius-sm;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* hover */
+.btn:hover {
+    background-color: variables.$color-secundario;
+    color: variables.$color-primario;
+}

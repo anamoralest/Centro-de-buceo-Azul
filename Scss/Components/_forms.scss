@@ -1,0 +1,33 @@
+/*Forms*/
+@use '../base/variables';
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 6px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: variables.$color-primario;
+}
+
+input[type="date"] { 
+    padding: 6px 10px;
+}
+
+.numero-usuario {
+    font-size: 15px;
+    font-weight: bold;
+    color: variables.$color-primario;
+    border-radius: 50%;
+    border: 3px solid variables.$color-primario;
+    width: 30px; height: 30px;
+    display: flex; justify-content: center; align-items: center;
+}

@@ -1,0 +1,71 @@
+@use './variables';
+
+/*-- media queries --*/
+
+@media (max-width: variables.$bp-lg) {
+	.footer .row > div { margin-bottom: 25px; }
+	.footer .row > div:last-child { margin-bottom: 0; }
+	
+}
+@media (max-width: variables.$bp-md) {
+	
+}
+
+@media (max-width: variables.$bp-md) {
+	.card-lugares {
+		flex-direction: column;
+		border-radius: variables.$radius-md;
+		overflow: hidden;
+	}
+
+	.img-lugares {
+		width: 100% ;
+		height: auto;  
+		border-radius: variables.$radius-md variables.$radius-md 0 0;
+	}
+
+	.col-md-9 {
+		border-radius: 0 0 variables.$radius-md variables.$radius-md;
+	}
+
+	.selector-fecha {
+		grid-template-columns: 1fr;
+	}
+
+	.carousel-item .col-12.col-md-4 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.carousel-control-prev {
+		left: -30px;
+	}
+	.carousel-control-next {
+		right: -30px;
+	}
+
+	.reserva-card { 
+		padding: 12px; 
+	}
+	.card-lugares .card-img img { 
+		transform: none; 
+	}
+}
+
+@media (min-width: variables.$bp-md) {
+	.acciones-reserva {
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+	
+}
+
+@media (max-width: 769px) {
+	.card-lugares {
+	flex-direction: column;
+	.card-img { flex: 0 0 auto; }
+	.card-img img { height: auto; }
+	}
+}
+
+

@@ -1,0 +1,23 @@
+@use'base/_variables.scss';
+@use'base/_generales.scss';
+@use'base/_queries.scss';
+
+/*components*/
+@use'components/_header.scss';
+@use'components/_footer.scss';
+@use'components/_buttons.scss';
+@use'components/_cards.scss';
+@use'components/_forms.scss';
+
+/*paginas*/
+/*index*/
+@use'paginas/index/hero';
+@use'paginas/index/servicios';
+@use'paginas/index/testimonios';
+@use'paginas/index/infoadicional';
+/*otras paginas*/
+@use'paginas/lugares';
+@use'paginas/reservar';
+@use'paginas/contacto';
+@use'paginas/perfil';
+@use'paginas/misreservas';

@@ -1,0 +1,61 @@
+@use '../../base/variables';
+@use '../../components/buttons';
+/* Hero Section */
+.hero {
+    background-image: url("../IMG/hero_section.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: variables.$spacing-lg;
+    margin-top: variables.$spacing-md;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    .hero-texto {
+        background-color: #fff;
+        padding: variables.$spacing-md;
+        border-radius: variables.$radius-md;
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeUp 0.8s ease-out forwards;
+        @keyframes fadeUp {/*animación*/
+            to {
+            opacity: 1;
+            transform: translateY(0);
+            }
+        }
+        h1 {
+            margin-bottom: 10px;
+            color: variables.$color-terciario;
+            font-weight: 600;
+        }
+        .hero-subtitle {
+            color: variables.$color-primario;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 25px;
+            color: variables.$color-texto;
+        }
+        .boton-reservar {
+            background-color: variables.$color-primario;
+            transition: transform 0.2s ease;
+            &:hover {
+                background-color: #fff;
+                color: variables.$color-primario;
+                transform: scale(1.05);
+            }
+            animation: pulse 3s infinite; /*Animación*/
+            @keyframes pulse {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.03); }
+            }
+        }
+    }
+}
