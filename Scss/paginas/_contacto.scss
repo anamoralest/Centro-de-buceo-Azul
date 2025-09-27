@@ -1,20 +1,30 @@
-/*Contacto*/
 @use '../base/variables';
 @use '../components/forms';
 @use '../components/buttons';
+@use '../base/utils';
 
 .contacto-form {
+    @extend %card-base;
     max-width: variables.$max-width;
     margin: 20px auto;
     background-color: variables.$color-secundario;
     padding: 20px;
     border-radius: variables.$radius-md;
     box-sizing: border-box;
-    input, textarea{
+
+    @include utils.card-hover(
+        variables.$color-secundario,
+        #fff,
+        variables.$color-primario,
+        1.02,
+        2px solid rgba(0, 5, 161, 0.2)
+    );
+
+    input, textarea {
         &:focus {
-        border-color: variables.$color-primario;
-        box-shadow: 0 0 6px rgba(0, 5, 161, 0.2);
-        outline: none;
+            border-color: variables.$color-primario;
+            box-shadow: 0 0 6px rgba(0, 5, 161, 0.2);
+            outline: none;
         }
     }
 }
@@ -23,6 +33,7 @@
     color: variables.$color-primario; 
     margin-bottom: variables.$spacing-sm; 
 }
+
 .contacto-form p { 
     margin-bottom: variables.$spacing-sm; 
     color: variables.$color-texto; 
@@ -35,9 +46,7 @@
 }
 
 .btn-enviar {
+    @extend %btn-base;
     align-self: flex-start; 
-}
-.btn-enviar:hover { 
-    background: #fff; 
-    color: variables.$color-primario; 
+    @include utils.btn-hover(#fff, variables.$color-primario);
 }

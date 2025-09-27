@@ -1,8 +1,9 @@
-/*Botones*/
 @use '../base/variables';
+@use '../base/utils';
 
-/* botón base */
+/* Botón base */
 .btn {
+    @extend %btn-base;
     display: inline-block;
     background-color: variables.$color-primario;
     color: #fff;
@@ -14,10 +15,6 @@
     transition: background-color 0.15s ease, color 0.15s ease;
     border: none;
     cursor: pointer;
-}
 
-/* hover */
-.btn:hover {
-    background-color: variables.$color-secundario;
-    color: variables.$color-primario;
+    @include utils.btn-hover(variables.$color-secundario, variables.$color-primario);
 }

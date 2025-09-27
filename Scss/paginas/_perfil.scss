@@ -3,20 +3,26 @@
 @use '../components/forms';
 @use '../components/buttons';
 
+/*------- Perfil Section -------*/
 .perfil-section {
     background-color: variables.$color-secundario;
     margin-top: 20px;
-    padding: 20px;
+    padding: variables.$spacing-md;
     border-radius: variables.$radius-md;
+
     .perfil-datos {
-            .card-perfil {
+        .card-perfil {
             padding: variables.$spacing-sm;
             border-radius: variables.$radius-sm;
-            h4 { color: variables.$color-primario; 
+
+            h4 { 
+                color: variables.$color-primario; 
                 font-size: 18px; 
                 margin-bottom: 5px; 
             }
-            p { margin: 0; 
+
+            p { 
+                margin: 0; 
                 font-size: 16px; 
                 color: variables.$color-texto; 
             }
@@ -32,9 +38,9 @@
     }
 }
 
-/* Botones de acciones */
+/*------- Botones de Acciones -------*/
 .acciones {
-    margin: 20px 0;
+    margin: variables.$spacing-md 0;
     display: flex;
     flex-wrap: wrap;
     gap: variables.$spacing-md;

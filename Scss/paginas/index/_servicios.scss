@@ -1,32 +1,40 @@
 @use '../../base/variables';
 @use '../../components/buttons';
+@use '../../base/utils';
+
 /*----------Servicios--------------*/
 .servicios {
     margin-top: variables.$spacing-md;
+
     h3 {
         color: variables.$color-primario;
         font-weight: 700;
     }
+
     .servicios-card {
         background-color: variables.$color-secundario;
         text-align: center;
         padding: variables.$spacing-sm;
         border-radius: variables.$radius-md;
+
         h4, p {
             margin: 10px 0;
         }
+
         .rectangular-card {
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: variables.$radius-sm;
         }
+
         .servicios-titulo {
             font-style: italic;
             color: variables.$color-primario;
             margin-top: 10px;
             font-size: 20px;
         }
+
         .servicio-paragraph {
             font-size: 0.9rem;
             color: variables.$color-texto;
@@ -34,28 +42,30 @@
             line-height: 1.4;
         }
     }
+
     .presupuesto-card {
         background-color: variables.$color-secundario;
         border-radius: variables.$radius-md;
         padding: 25px;
         text-align: center;
+
         .servicios-titulo { 
             font-size: 20px; 
             color: variables.$color-primario;
             font-style: italic;
         }
+
         .servicio-paragraph { 
             line-height: 1.5; 
         }
+
         .contactar {
+            @extend %btn-base;
             background-color: variables.$color-primario;
             color: #fff;
             margin-top: variables.$spacing-sm;
-            &:hover {
-                background-color: #fff;
-                color: variables.$color-primario;
-            }
+
+            @include utils.btn-hover(#fff, variables.$color-primario);
         }
     }
 }
-
