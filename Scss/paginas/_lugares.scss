@@ -18,12 +18,14 @@
 	}
 
 	.card-lugares {
-		display: flex;
-		gap: variables.$spacing-md;
-		background: variables.$color-secundario;
-		border-radius: variables.$radius-md;
-		overflow: hidden;
-		align-items: stretch;
+        display: flex;
+        gap: variables.$spacing-md;
+        background: variables.$color-secundario;
+        border-radius: variables.$radius-md;
+        overflow: hidden;
+        align-items: stretch;
+        transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
+
         .card-img {
             flex: 0 0 260px;
             img {
@@ -32,23 +34,23 @@
                 object-fit: cover;
                 display: block;
                 transition: transform 0.4s ease;
-                
             }
-		}
+        }
 
-		.card-content {
-		flex: 1 1 auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		padding: 1rem;
-		}
-        &:hover {/*animación*/
+        .card-content {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem;
+            
+        }
+        &:hover {
             background-color: #fff;
             color: variables.$color-primario;
-            transform: scale(1.05);
+            transform: scale(1.05); /* escala la card completa */
         }
-	}
+    }
     h3 { 
         color: variables.$color-primario; 
         margin-bottom: 6px; 

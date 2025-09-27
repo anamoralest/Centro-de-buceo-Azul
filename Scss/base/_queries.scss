@@ -3,52 +3,55 @@
 /*-- media queries --*/
 
 @media (max-width: variables.$bp-lg) {
-	.footer .row > div { margin-bottom: 25px; }
-	.footer .row > div:last-child { margin-bottom: 0; }
+	.footer .row > div { 
+		margin-bottom: 25px; 
+	}
+	.footer .row > div:last-child { 
+		margin-bottom: 0; 
+	}
 	
 }
+
 @media (max-width: variables.$bp-md) {
+	.lugares{
+		.card-lugares {
+			flex-direction: column;
+			border-radius: variables.$radius-md;
+			overflow: hidden;
+			.img-lugares {
+				width: 100% ;
+				height: auto;  
+				border-radius: variables.$radius-md variables.$radius-md 0 0;
+			}
+		}
+	}
 	
-}
-
-@media (max-width: variables.$bp-md) {
-	.card-lugares {
-		flex-direction: column;
-		border-radius: variables.$radius-md;
-		overflow: hidden;
+	.testimonio{
+		#carouselTestimonios 
+		.carousel-inner {
+			width: 70%;
+			margin: 0 auto;
+			}
+			.carousel-control-prev {
+				left: 10px;
+			}
+			.carousel-control-next {
+				right: 10px;
+			}
+			.carousel-item .col-12.col-md-4 {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
 	}
-
-	.img-lugares {
-		width: 100% ;
-		height: auto;  
-		border-radius: variables.$radius-md variables.$radius-md 0 0;
-	}
-
-	.col-md-9 {
-		border-radius: 0 0 variables.$radius-md variables.$radius-md;
-	}
-
-	.selector-fecha {
-		grid-template-columns: 1fr;
-	}
-
-	.carousel-item .col-12.col-md-4 {
-		flex: 0 0 100%;
-		max-width: 100%;
-	}
-
-	.carousel-control-prev {
-		left: -30px;
-	}
-	.carousel-control-next {
-		right: -30px;
-	}
-
-	.reserva-card { 
-		padding: 12px; 
-	}
-	.card-lugares .card-img img { 
-		transform: none; 
+	.reserva-form{
+			.reserva-card { 
+				padding: 12px; 
+			}
+		}
+	.lugares{
+		.card-lugares .card-img img { 
+			transform: none; 
+		}
 	}
 }
 
@@ -62,9 +65,13 @@
 
 @media (max-width: 769px) {
 	.card-lugares {
-	flex-direction: column;
-	.card-img { flex: 0 0 auto; }
-	.card-img img { height: auto; }
+		flex-direction: column;
+		.card-img { 
+			flex: 0 0 auto; 
+		}
+		.card-img img { 
+			height: auto; 
+		}
 	}
 }
 

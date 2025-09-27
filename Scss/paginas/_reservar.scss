@@ -35,14 +35,6 @@
 }
 
 /* Selector fecha */
-.selector-fecha {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 30px;
-    max-width: variables.$max-width;
-    margin: 0 auto;
-}
-
 .fecha-calendario { 
     background: #fff; 
     padding: 10px; 
