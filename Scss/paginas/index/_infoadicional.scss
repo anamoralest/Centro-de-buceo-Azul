@@ -1,18 +1,32 @@
 @use '../../base/variables';
 @use '../../components/buttons';
+@use '../../base/utils';
+
 /* Info Adicional */
 .info-adicional {
     background-color: variables.$color-secundario;
     margin-bottom: variables.$spacing-md;
+
     .info-card {
+        @extend %card-base;
         padding: variables.$spacing-md;
         background-color: #fff;
         border-radius: variables.$radius-md;
         text-align: left;
+
+        @include utils.card-hover(
+            #fff,
+            variables.$color-secundario,
+            variables.$color-primario,
+            1.02,
+            2px solid rgba(0, 5, 161, 0.2)
+        );
+
         h3 { 
             color: variables.$color-primario; 
             margin-bottom: 15px; 
         }
+
         p, ul li { 
             font-size: 14px; 
             color: variables.$color-texto; 

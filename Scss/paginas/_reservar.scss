@@ -1,8 +1,9 @@
-/*Revervar*/
 @use '../base/variables';
 @use '../components/forms';
 @use '../components/buttons';
+@use '../base/utils';
 
+/*------- Reserva -------*/
 .reserva-form {
     width: 100%;
     display: flex;
@@ -26,35 +27,40 @@
     margin: variables.$spacing-md auto;
     box-sizing: border-box;
 }
-.form-select{
+
+/* Selector fecha */
+.form-select {
     &:focus {
-    border-color: variables.$color-primario;
-    box-shadow: 0 0 6px rgba(0, 5, 161, 0.2);
-    outline: none;
+        border-color: variables.$color-primario;
+        box-shadow: 0 0 6px rgba(0, 5, 161, 0.2);
+        outline: none;
     }
 }
 
-/* Selector fecha */
 .fecha-calendario { 
     background: #fff; 
     padding: 10px; 
     border-radius: variables.$radius-sm; 
 }
+
 .calendario-header { 
     background: variables.$color-primario; 
     color: #fff; 
     padding: 6px 10px; 
     border-radius: 4px; 
-    display:flex; 
-    justify-content:space-between; 
-    align-items:center; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
-.dias-semana, .dias-grid { 
+
+.dias-semana, 
+.dias-grid { 
     display: grid; 
-    grid-template-columns: repeat(7,1fr); 
-    text-align:center; 
-    gap:4px; 
+    grid-template-columns: repeat(7, 1fr); 
+    text-align: center; 
+    gap: 4px; 
 }
+
 .dias-grid span {
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
@@ -62,21 +68,21 @@
 
     &:hover {
         background: variables.$color-secundario;
-        border-radius: 50%;
         transform: scale(1.1);
     }
 }
 
 .datos-form { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 15px; 
 }
+
 .datos-form input {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     &:focus {
-    border-color: variables.$color-primario;
-    box-shadow: 0 0 6px rgba(0, 5, 161, 0.2);
-    outline: none;
+        border-color: variables.$color-primario;
+        box-shadow: 0 0 6px rgba(0, 5, 161, 0.2);
+        outline: none;
     }
 }
