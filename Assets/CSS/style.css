@@ -72,36 +72,34 @@ img {
   }
 }
 @media (max-width: 768px) {
-  .card-lugares {
+  .lugares .card-lugares {
     flex-direction: column;
     border-radius: 8px;
     overflow: hidden;
   }
-  .img-lugares {
+  .lugares .card-lugares .img-lugares {
     width: 100%;
     height: auto;
     border-radius: 8px 8px 0 0;
   }
-  .col-md-9 {
-    border-radius: 0 0 8px 8px;
+  .testimonio #carouselTestimonios .carousel-inner {
+    width: 70%;
+    margin: 0 auto;
   }
-  .selector-fecha {
-    grid-template-columns: 1fr;
+  .testimonio .carousel-control-prev {
+    left: 10px;
   }
-  .carousel-item .col-12.col-md-4 {
+  .testimonio .carousel-control-next {
+    right: 10px;
+  }
+  .testimonio .carousel-item .col-12.col-md-4 {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  .carousel-control-prev {
-    left: -30px;
-  }
-  .carousel-control-next {
-    right: -30px;
-  }
-  .reserva-card {
+  .reserva-form .reserva-card {
     padding: 12px;
   }
-  .card-lugares .card-img img {
+  .lugares .card-lugares .card-img img {
     transform: none;
   }
 }
@@ -499,14 +497,23 @@ input[type=date] {
   font-weight: 700;
   margin: 0 auto 0 auto;
 }
-.testimonios .testimonio-card {
+.testimonios .carousel-inner {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.testimonios .carousel-inner .carousel-item {
+  min-height: 400px;
+}
+.testimonios .carousel-inner .carousel-item .testimonio-card {
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.testimonios .testimonio-card .circle-card {
+.testimonios .carousel-inner .carousel-item .testimonio-card .circle-card {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -517,15 +524,15 @@ input[type=date] {
   justify-content: center;
   transition: transform 0.3s ease;
 }
-.testimonios .testimonio-card .circle-card:hover {
+.testimonios .carousel-inner .carousel-item .testimonio-card .circle-card:hover {
   transform: scale(1.05); /*Animación*/
 }
-.testimonios .testimonio-card .testimonio-name {
+.testimonios .carousel-inner .carousel-item .testimonio-card .testimonio-name {
   font-style: italic;
   color: #0005A1;
   margin-bottom: 10px;
 }
-.testimonios .testimonio-card .testimonio-paragraph {
+.testimonios .carousel-inner .carousel-item .testimonio-card .testimonio-paragraph {
   font-size: 14px;
   color: #333333;
   line-height: 1.5;
@@ -555,12 +562,6 @@ input[type=date] {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.testimonios #carouselTestimonios .carousel-control-prev {
-  left: -50px;
-}
-.testimonios #carouselTestimonios .carousel-control-next {
-  right: -50px;
 }
 
 /* Info Adicional */
@@ -606,6 +607,7 @@ input[type=date] {
   border-radius: 8px;
   overflow: hidden;
   align-items: stretch;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
 }
 .lugares .card-lugares .card-img {
   flex: 0 0 260px;
@@ -625,10 +627,10 @@ input[type=date] {
   justify-content: space-between;
   padding: 1rem;
 }
-.lugares .card-lugares:hover { /*animación*/
+.lugares .card-lugares:hover {
   background-color: #fff;
   color: #0005A1;
-  transform: scale(1.05);
+  transform: scale(1.05); /* escala la card completa */
 }
 .lugares h3 {
   color: #0005A1;
@@ -679,14 +681,6 @@ input[type=date] {
 }
 
 /* Selector fecha */
-.selector-fecha {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 30px;
-  max-width: 1040px;
-  margin: 0 auto;
-}
-
 .fecha-calendario {
   background: #fff;
   padding: 10px;
